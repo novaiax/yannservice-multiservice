@@ -1,0 +1,65 @@
+/* === YannService - Urgence-first patch ===
+   Option 1 (recommended): append this at the END of css/style.css
+   Option 2: save as css/urgence_patch.css and add
+     <link rel="stylesheet" href="css/urgence_patch.css">
+   right after your existing style.css link.
+*/
+
+/* 1) Trust chips under hero */
+.hero-trust{margin-top:14px}
+.hero-trust-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.hero-trust-list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.16);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  font-weight:600;
+  font-size:0.95rem;
+  line-height:1.2;
+}
+.hero-trust-list li::before{
+  content:"✓";
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  border-radius:999px;
+  background:rgba(255,122,0,.18);
+  border:1px solid rgba(255,122,0,.35);
+  color:#ff7a00;
+  font-weight:800;
+  flex:0 0 22px;
+}
+
+/* Better legibility if your hero background is light */
+.hero.hero-urgence .hero-trust-list li{
+  color:inherit;
+}
+
+/* 2) Make the hero CTA stack nicely on mobile */
+@media (max-width: 720px){
+  .hero-cta-triple{display:flex;flex-direction:column;gap:12px}
+  .hero-trust-list{flex-direction:column}
+  .hero-trust-list li{width:100%}
+}
+
+/* 3) Small links block for other services */
+.other-services-links{margin-top:18px;text-align:center;opacity:.92}
+.other-services-links a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.other-services-links a:hover{opacity:.85}
+
+/* 4) Urgence badge/accents (safe overrides) */
+.hero.hero-urgence .hero-badge{
+  border:1px solid rgba(255,122,0,.30);
+  background:rgba(255,122,0,.12);
+}
+.hero.hero-urgence .badge-dot{background:#ff7a00}
+
+/* 5) Reduce visual noise: hide empty service cards if any remain */
+.services-grid .service-card:empty{display:none}

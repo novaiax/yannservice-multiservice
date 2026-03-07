@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K885L6DR');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Outil sur mesure pour optimiser votre entreprise. Application web personnalisée, automatisations intégrées, interface simple. Transformez vos idées en avantage concurrentiel.">
+    <meta name="keywords" content="outil sur mesure, application web, logiciel personnalisé, automatisation, développement sur mesure, optimisation entreprise">
+    <title>Outil Sur Mesure | YannService</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Outil Sur Mesure | YannService">
+    <meta property="og:description" content="Transformez vos idées en avantage concurrentiel. Application web personnalisée adaptée à votre façon de travailler.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <style>
+        /* Variables Premium - Neutralized */
+        :root {
+            --color-gold: #0A0A0A;
+            --color-gold-hover: #1a1a1a;
+            --color-gold-light: #F8F8F8;
+            --color-gold-gradient: #0A0A0A;
+            --color-dark: #0A0A0A;
+            --color-dark-light: #1a1a1a;
+        }
+
+        /* Bouton Gold Premium Black */
+        .btn-gold {
+            padding: 1rem 2rem;
+            background: var(--color-primary, #0A0A0A);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-gold:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Header Premium */
+        .page-header.premium-header {
+            background: #F8F8F8;
+            padding-top: 140px;
+            padding-bottom: 80px;
+        }
+
+        .page-header h1 .gold {
+            color: var(--color-text, #111);
+        }
+
+        .section-label.gold {
+            background: transparent;
+            color: var(--color-text-secondary, #6B7280);
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Exclusive badge */
+        .exclusive-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-primary, #0A0A0A);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .exclusive-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            background: var(--color-primary, #0A0A0A);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-section::before {
+            display: none;
+        }
+
+        .pain-section .section-header h2 {
+            color: white;
+        }
+
+        .pain-section .section-label {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .pain-card {
+            background: #1a1a1a;
+            border-radius: 4px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: border-color 0.2s ease;
+            position: relative;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #DC2626;
+            border-radius: 4px 4px 0 0;
+            opacity: 0.8;
+        }
+
+        .pain-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .pain-card .pain-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            color: #EF4444;
+        }
+
+        .pain-card h3 {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .pain-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 4px;
+            padding: 2rem;
+            border: 1px solid var(--color-border, #E5E5E5);
+            transition: border-color 0.2s ease;
+            position: relative;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--color-primary, #0A0A0A);
+            border-radius: 4px 4px 0 0;
+        }
+
+        .solution-card:hover {
+            border-color: var(--color-text, #111);
+        }
+
+        .solution-card .solution-icon {
+            width: 56px;
+            height: 56px;
+            background: #F8F8F8;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-text, #111);
+        }
+
+        .solution-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--color-text, #111);
+        }
+
+        .solution-card p {
+            color: var(--color-text-secondary, #6B7280);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Transformation Section */
+        .transformation-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .transformation-box {
+            background: var(--color-primary, #0A0A0A);
+            border-radius: 4px;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transformation-box::before {
+            display: none;
+        }
+
+        .transformation-before, .transformation-after {
+            text-align: center;
+        }
+
+        .transformation-before h3 {
+            color: #EF4444;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .transformation-after h3 {
+            color: #10B981;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .transformation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .transformation-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .transformation-list li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .transformation-before .transformation-list li svg {
+            color: #EF4444;
+        }
+
+        .transformation-after .transformation-list li svg {
+            color: #10B981;
+        }
+
+        .transformation-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .transformation-arrow svg {
+            color: white;
+            animation: arrow-pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes arrow-pulse {
+            0%, 100% { transform: translateX(0); opacity: 1; }
+            50% { transform: translateX(10px); opacity: 0.7; }
+        }
+
+        .transformation-arrow span {
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Examples Section */
+        .examples-section {
+            padding: 5rem 0;
+            background: #F8F8F8;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: 4px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--color-border, #E5E5E5);
+            transition: border-color 0.2s ease;
+        }
+
+        .example-card:hover {
+            border-color: var(--color-text, #111);
+        }
+
+        .example-card .example-icon {
+            width: 48px;
+            height: 48px;
+            background: #F8F8F8;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--color-text, #111);
+        }
+
+        .example-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--color-text, #111);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Deliverables Section */
+        .deliverables-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .deliverable-card {
+            background: white;
+            border-radius: 4px;
+            padding: 1.75rem;
+            border: 1px solid var(--color-border, #E5E5E5);
+            text-align: center;
+            transition: border-color 0.2s ease;
+        }
+
+        .deliverable-card:hover {
+            border-color: var(--color-text, #111);
+        }
+
+        .deliverable-card .check-icon {
+            width: 40px;
+            height: 40px;
+            background: #ECFDF5;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: #10B981;
+        }
+
+        .deliverable-card p {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--color-text, #111);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Process Premium */
+        .process-premium {
+            padding: 5rem 0;
+            background: var(--color-primary, #0A0A0A);
+            position: relative;
+        }
+
+        .process-premium .section-header h2 {
+            color: white;
+        }
+
+        .process-premium .section-label {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .process-premium-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .process-premium-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: 0;
+        }
+
+        .process-premium-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-premium-step .step-number {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-primary, #0A0A0A);
+        }
+
+        .process-premium-step h3 {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-premium-step p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Pricing Premium */
+        .pricing-premium {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .pricing-premium-card {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            background: white;
+            border-radius: 4px;
+            padding: 3rem;
+            border: 2px solid var(--color-primary, #0A0A0A);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--color-primary, #0A0A0A);
+        }
+
+        .pricing-premium-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--color-primary, #0A0A0A);
+            color: white;
+            padding: 0.5rem 3rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transform: rotate(45deg);
+        }
+
+        .pricing-premium-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-premium-header h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--color-text, #111);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-premium-header p {
+            color: var(--color-text-secondary, #6B7280);
+            font-size: 1rem;
+        }
+
+        .pricing-premium-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-info-box {
+            background: #F8F8F8;
+            border-radius: 4px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .pricing-info-box .label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--color-text-secondary, #6B7280);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-info-box .value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text, #111);
+        }
+
+        .pricing-premium-note {
+            background: var(--color-primary, #0A0A0A);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-premium-note p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+            text-align: center;
+        }
+
+        .pricing-premium-note strong {
+            color: white;
+        }
+
+        .pricing-premium-cta {
+            text-align: center;
+        }
+
+        .pricing-premium-cta .btn-gold {
+            font-size: 1.125rem;
+            padding: 1.25rem 3rem;
+        }
+
+        .pricing-premium-cta .micro-text {
+            margin-top: 1rem;
+            font-size: 0.8125rem;
+            color: var(--color-text-secondary, #6B7280);
+        }
+
+        /* Maintenance Section */
+        .maintenance-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .maintenance-box {
+            background: #F8F8F8;
+            border-radius: 4px;
+            padding: 3rem;
+            border: 1px solid var(--color-border, #E5E5E5);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .maintenance-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .maintenance-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text, #111);
+            margin-bottom: 0.5rem;
+        }
+
+        .maintenance-header p {
+            color: var(--color-text-secondary, #6B7280);
+            font-size: 1rem;
+        }
+
+        .maintenance-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        .maintenance-item {
+            background: white;
+            border-radius: 4px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid var(--color-border, #E5E5E5);
+        }
+
+        .maintenance-item svg {
+            color: var(--color-text, #111);
+            margin-bottom: 0.75rem;
+        }
+
+        .maintenance-item p {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-text, #111);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .maintenance-note {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border, #E5E5E5);
+        }
+
+        .maintenance-note p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary, #6B7280);
+            margin: 0;
+        }
+
+        .maintenance-note strong {
+            color: var(--color-text, #111);
+        }
+
+        /* CTA Premium */
+        .cta-section.premium {
+            background: var(--color-primary, #0A0A0A);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section.premium::before {
+            display: none;
+        }
+
+        .cta-section.premium::after {
+            display: none;
+        }
+
+        .cta-section.premium .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section.premium h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section.premium .highlight-gold {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .cta-section.premium p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        .cta-section.premium .cta-buttons {
+            margin-top: 2rem;
+        }
+
+        .cta-section.premium .btn-gold {
+            background: white;
+            color: var(--color-primary, #0A0A0A);
+            font-size: 1.125rem;
+            padding: 1.25rem 2.5rem;
+        }
+
+        .cta-section.premium .btn-gold:hover {
+            background: #E5E5E5;
+            color: var(--color-primary, #0A0A0A);
+        }
+
+        /* Feature icon gold */
+        .feature-icon.gold {
+            background: #F8F8F8;
+            color: var(--color-text, #111);
+        }
+
+        /* Sticky CTA Gold */
+        .sticky-btn-devis.gold {
+            background: var(--color-primary, #0A0A0A) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-box {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2.5rem;
+            }
+
+            .transformation-arrow {
+                transform: rotate(90deg);
+            }
+
+            .transformation-arrow span {
+                writing-mode: horizontal-tb;
+            }
+
+            .examples-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .deliverables-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-premium-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem 1.5rem;
+            }
+
+            .process-premium-grid::before {
+                display: none;
+            }
+
+            .maintenance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .btn-gold {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .page-header.premium-header {
+                padding-top: 120px;
+                padding-bottom: 60px;
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-premium-card {
+                padding: 2rem;
+            }
+
+            .pricing-premium-info {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-premium-badge {
+                display: none;
+            }
+
+            .cta-section.premium h2 {
+                font-size: 1.75rem;
+            }
+
+            .process-premium-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .maintenance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K885L6DR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    
+                    <span class="brand-yann">Yann</span><span class="brand-service">Service</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="landing.html" class="nav-link">Landing Pages</a>
+                    <a href="site.html" class="nav-link">Sites Web</a>
+                    <a href="urgence.html" class="nav-link">Urgence</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <div class="nav-cta">
+                        <a href="https://wa.me/33766880019" class="btn-whatsapp-small" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header premium-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="exclusive-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                    Offre Premium
+                </div>
+                <h1>Outil <span class="gold">sur mesure</span> pour optimiser votre entreprise</h1>
+                <p>Vous avez une idée pour mieux organiser, automatiser ou accélérer votre activité. Même floue, elle peut devenir un outil concret utilisable tous les jours.</p>
+                <div class="hero-cta">
+                    <a href="contact.html?service=outil-sur-mesure" class="btn-gold">
+                        Discutons de votre projet
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/33766880019" class="btn-whatsapp" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Le constat</span>
+                <h2>Ces situations vous parlent ?</h2>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>"Je perds trop de temps à faire ça manuellement"</h3>
+                    <p>Copier-coller entre fichiers, ressaisir les mêmes infos, manipuler des tableaux Excel interminables... Chaque minute perdue est une minute en moins pour vos clients.</p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>"J'aimerais que cette étape se fasse automatiquement"</h3>
+                    <p>Calculs, envois, rappels, mises à jour... Vous savez que ça pourrait être automatisé, mais vous ne savez pas comment ni par où commencer.</p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>"On a besoin d'un outil pour mieux suivre nos clients"</h3>
+                    <p>Informations éparpillées, historique difficile à retrouver, suivi approximatif... Vos clients méritent mieux, et vous aussi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">La solution</span>
+                <h2 class="section-title">Ce que ça <span class="highlight">permet</span></h2>
+                <p class="section-description">Un outil sur mesure conçu pour votre réalité terrain. Pas un logiciel générique, mais VOTRE système.</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Remplacez des manipulations manuelles par un bouton</h3>
+                    <p>Ce qui prenait 30 minutes se fait en 2 secondes. Plus d'erreurs de saisie, plus de temps perdu.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Transformez un process flou en workflow clair</h3>
+                    <p>Chaque étape est définie, suivie et traçable. Votre équipe sait exactement quoi faire et quand.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Centralisez des informations dispersées</h3>
+                    <p>Fini les fichiers Excel, les notes papier et les emails perdus. Tout est au même endroit, accessible en temps réel.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Automatisez les actions répétitives</h3>
+                    <p>Calculs, rappels, notifications, génération de documents... L'outil travaille pour vous 24h/24.</p>
+                </div>
+            </div>
+
+            <div class="result-highlight">
+                <p class="result-highlight-text">
+                    Résultat : <span>plus de rapidité, moins d'erreurs, plus de ventes.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">La transformation</span>
+                <h2 class="section-title">Avant / Après</h2>
+            </div>
+
+            <div class="transformation-box">
+                <div class="transformation-before">
+                    <h3>Avant</h3>
+                    <ul class="transformation-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Idée floue qui reste dans votre tête</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Processus manuel et chronophage</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Erreurs humaines récurrentes</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Données dispersées partout</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Temps perdu chaque jour</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="transformation-arrow">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                    <span>Votre outil</span>
+                </div>
+
+                <div class="transformation-after">
+                    <h3>Après</h3>
+                    <ul class="transformation-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Outil concret utilisable tous les jours</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Actions automatisées en un clic</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Zéro erreur, zéro oubli</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Tout centralisé au même endroit</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Des heures récupérées chaque semaine</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">Exemples</span>
+                <h2 class="section-title">Ce qu'on peut créer pour vous</h2>
+                <p class="section-description">Quelques idées d'outils sur mesure. Le vôtre sera unique.</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h4>Génération automatique de devis et factures</h4>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>Tableau unique gestion clients et prospects</h4>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h4>Automatisation complète d'un process interne</h4>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h4>Espace client privé (projets, commandes)</h4>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </div>
+                    <h4>Création de documents et rapports en un clic</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="deliverables-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">Ce que vous recevez</span>
+                <h2 class="section-title">Tout est inclus</h2>
+            </div>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Application web sécurisée accessible par identifiant</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Fonctionnalités 100% adaptées à votre entreprise</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Interface simple pour vous et votre équipe</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Automatisations intégrées (calculs, PDF, notifications)</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Mise en ligne HTTPS sur domaine dédié</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Sauvegardes automatiques de vos données</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Prise en main guidée</p>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="check-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Support dédié pendant le développement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Premium -->
+    <section class="process-premium">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Comment on procède</span>
+                <h2>4 étapes vers votre outil</h2>
+            </div>
+
+            <div class="process-premium-grid">
+                <div class="process-premium-step">
+                    <div class="step-number">1</div>
+                    <h3>Échange stratégique</h3>
+                    <p>On clarifie votre besoin réel. Pas besoin de cahier des charges technique, juste votre réalité terrain.</p>
+                </div>
+
+                <div class="process-premium-step">
+                    <div class="step-number">2</div>
+                    <h3>Conception</h3>
+                    <p>Je conçois la meilleure solution à partir de votre idée. Vous validez avant le développement.</p>
+                </div>
+
+                <div class="process-premium-step">
+                    <div class="step-number">3</div>
+                    <h3>Développement</h3>
+                    <p>Je construis votre outil avec des validations intermédiaires. Vous voyez l'avancée en temps réel.</p>
+                </div>
+
+                <div class="process-premium-step">
+                    <div class="step-number">4</div>
+                    <h3>Livraison</h3>
+                    <p>Outil testé, mis en ligne et immédiatement utilisable. Prise en main guidée incluse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Premium -->
+    <section class="pricing-premium">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">Investissement</span>
+                <h2 class="section-title">Sur devis uniquement</h2>
+                <p class="section-description">Chaque projet est unique. Le prix dépend de la complexité et des fonctionnalités.</p>
+            </div>
+
+            <div class="pricing-premium-card">
+                <div class="pricing-premium-badge">Sur mesure</div>
+
+                <div class="pricing-premium-header">
+                    <h3>Votre outil personnalisé</h3>
+                    <p>Application web adaptée à votre façon de travailler</p>
+                </div>
+
+                <div class="pricing-premium-info">
+                    <div class="pricing-info-box">
+                        <div class="label">Délai projet</div>
+                        <div class="value">1 à 8 semaines</div>
+                    </div>
+                    <div class="pricing-info-box">
+                        <div class="label">Maintenance</div>
+                        <div class="value">Mensuelle incluse</div>
+                    </div>
+                </div>
+
+                <div class="pricing-premium-note">
+                    <p><strong>Vous n'achetez pas du code.</strong><br>Vous investissez dans un système unique qui optimise votre entreprise et génère un vrai retour sur investissement.</p>
+                </div>
+
+                <div class="pricing-premium-cta">
+                    <a href="contact.html?service=outil-sur-mesure" class="btn-gold">
+                        Demander un devis gratuit
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <p class="micro-text">Réponse garantie sous 24h - Aucun engagement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="maintenance-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">Maintenance & Sécurité</span>
+                <h2 class="section-title">Votre outil reste fiable dans le temps</h2>
+            </div>
+
+            <div class="maintenance-box">
+                <div class="maintenance-header">
+                    <h3>Ce qui est inclus dans la maintenance mensuelle</h3>
+                    <p>Pour garantir la fiabilité et la protection de vos données</p>
+                </div>
+
+                <div class="maintenance-grid">
+                    <div class="maintenance-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <p>Mises à jour de sécurité</p>
+                    </div>
+
+                    <div class="maintenance-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                        <p>Surveillance du serveur</p>
+                    </div>
+
+                    <div class="maintenance-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="21 8 21 21 3 21 3 8"/>
+                            <rect x="1" y="3" width="22" height="5"/>
+                            <line x1="10" y1="12" x2="14" y2="12"/>
+                        </svg>
+                        <p>Sauvegardes quotidiennes vérifiées</p>
+                    </div>
+
+                    <div class="maintenance-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        <p>Correctifs rapides si incident</p>
+                    </div>
+                </div>
+
+                <div class="maintenance-note">
+                    <p><strong>Maintenance mensuelle obligatoire</strong> pour assurer la continuité et la sécurité de votre service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">FAQ</span>
+                <h2 class="section-title">Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>J'ai une idée mais je ne sais pas si c'est faisable ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>C'est exactement le point de départ idéal. Lors de notre échange, on clarifie ensemble votre besoin et je vous dis clairement ce qui est faisable, comment et à quel prix. Aucun engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Je n'ai pas de cahier des charges technique</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Pas besoin. On part de votre réalité terrain : ce qui vous fait perdre du temps, ce que vous aimeriez automatiser, vos process actuels. Je m'occupe de traduire ça en solution technique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien ça coûte ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Chaque projet est unique. Le prix dépend de la complexité et des fonctionnalités souhaitées. Un outil simple peut démarrer à quelques centaines d'euros. Je vous fournis un devis détaillé après notre premier échange.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pourquoi une maintenance mensuelle ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Un outil web a besoin d'être maintenu pour rester sécurisé et fonctionnel : mises à jour, sauvegardes, surveillance serveur, correctifs. Sans maintenance, vous prenez des risques sur vos données et la disponibilité de votre outil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Je peux modifier l'outil après livraison ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Bien sûr. L'outil est conçu pour évoluer avec votre activité. Des ajustements mineurs peuvent être inclus dans la maintenance. Pour des évolutions majeures, on établit un nouveau devis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Premium -->
+    <section class="cta-section premium">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transformez vos idées en <span class="highlight-gold">avantage concurrentiel</span></h2>
+                <p>Prenez une longueur d'avance avec un outil que vos concurrents n'auront jamais.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html?service=outil-sur-mesure" class="btn-gold">
+                        Discuter de mon projet
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/33766880019" class="btn-outline-white" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp direct
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>© 2025 <span class="brand-yann">Yann</span><span class="brand-service">Service</span></p>
+                </div>
+                <div class="footer-right">
+                    <a href="tarifs.html" class="footer-link">Tarifs</a>
+                    <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+                    <a href="cgv.html" class="footer-link">CGV</a>
+                    <a href="confidentialite.html" class="footer-link">Confidentialité</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <div class="sticky-mobile-cta-content">
+            <a href="tel:+33766880019" class="sticky-btn sticky-btn-call">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                <span>Appeler</span>
+            </a>
+            <a href="https://wa.me/33766880019" class="sticky-btn sticky-btn-whatsapp" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>WhatsApp</span>
+            </a>
+            <a href="contact.html?service=outil-sur-mesure" class="sticky-btn sticky-btn-devis gold">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <span>Devis</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="js/script.js?v=4.0"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17862446693"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17862446693');
+    </script>
+</body>
+</html>

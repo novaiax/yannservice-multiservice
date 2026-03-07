@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K885L6DR');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Automatisation IA pour votre entreprise. Gestion automatique des emails, qualification des leads et audit de vos process. Gagnez du temps et des clients.">
+    <meta name="keywords" content="automatisation IA, intelligence artificielle, chatbot, qualification leads, relance automatique, audit process">
+    <title>Automatisation & IA | YannService</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Automatisation & IA | YannService">
+    <meta property="og:description" content="Automatisez vos demandes clients avec l'IA. Ne répondez qu'aux vrais prospects.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <style>
+        /* Variables IA */
+        :root {
+            --color-ia: #7C3AED;
+            --color-ia-hover: #6D28D9;
+            --color-ia-light: #EDE9FE;
+        }
+
+        /* Bouton IA */
+        .btn-ia {
+            padding: 1rem 2rem;
+            background: var(--color-ia);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-ia:hover {
+            background: var(--color-ia-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+            color: white;
+        }
+
+        /* Header IA */
+        .page-header.ia-header {
+            background: linear-gradient(180deg, #F5F3FF 0%, #FFFFFF 100%);
+        }
+
+        .page-header h1 .ia {
+            color: var(--color-ia);
+        }
+
+        .section-label.ia {
+            background: var(--color-ia-light);
+            color: var(--color-ia);
+        }
+
+        /* Pricing Cards IA */
+        .ia-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ia-pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .ia-pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .ia-pricing-card.featured {
+            border-color: var(--color-ia);
+            background: linear-gradient(180deg, var(--color-ia-light) 0%, #FFFFFF 100%);
+        }
+
+        .ia-pricing-card .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-ia);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .ia-pricing-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .ia-pricing-card .subtitle {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Problem/Promise boxes */
+        .problem-promise {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-box, .promise-box {
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .problem-box {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+        }
+
+        .promise-box {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+        }
+
+        .problem-box h4, .promise-box h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-box h4 {
+            color: #DC2626;
+        }
+
+        .promise-box h4 {
+            color: #16A34A;
+        }
+
+        .problem-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+
+        .problem-box li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.375rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .problem-box li::before {
+            content: "✕";
+            color: #DC2626;
+            font-weight: 600;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .promise-box p {
+            margin: 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-text);
+            line-height: 1.5;
+        }
+
+        /* Features list */
+        .ia-features {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .ia-features .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9375rem;
+            color: var(--color-text);
+            margin-bottom: 0.625rem;
+        }
+
+        .ia-features .feature-item svg {
+            flex-shrink: 0;
+            color: var(--color-ia);
+            margin-top: 2px;
+        }
+
+        /* Pricing display */
+        .ia-price-display {
+            padding: 1rem 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 1.5rem;
+        }
+
+        .ia-price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .ia-price-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .ia-price-label {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+        }
+
+        .ia-price-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-ia);
+        }
+
+        .ia-price-single {
+            text-align: center;
+            padding: 1.25rem 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 1.5rem;
+        }
+
+        .ia-price-single .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-ia);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .ia-price-single .note {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* CTA Button */
+        .btn-ia-card {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-ia);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin-top: auto;
+        }
+
+        .btn-ia-card:hover {
+            background: var(--color-ia-hover);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Feature icon IA */
+        .feature-icon.ia {
+            background: var(--color-ia-light);
+            color: var(--color-ia);
+        }
+
+        /* CTA Section IA */
+        .cta-section.ia {
+            background: linear-gradient(135deg, var(--color-ia) 0%, var(--color-ia-hover) 100%);
+        }
+
+        /* Step number IA */
+        .process-step .step-number.ia-step {
+            background: var(--color-ia);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .ia-pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .ia-pricing-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .btn-ia {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .problem-promise {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .problem-box, .promise-box {
+                padding: 1rem;
+            }
+
+            .ia-pricing-card h3 {
+                font-size: 1.125rem;
+            }
+
+            .ia-price-single .amount {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K885L6DR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    
+                    <span class="brand-yann">Yann</span><span class="brand-service">Service</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="site.html" class="nav-link">Sites Web</a>
+                    <a href="urgence.html" class="nav-link">Urgence</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+					<a href="propos.html" class="nav-link">A propos</a>
+                    <div class="nav-cta">
+                        <a href="https://wa.me/33766880019" class="btn-whatsapp-small" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header ia-header">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="section-label ia">Automatisation & IA</span>
+                <h1>Libérez votre temps et concentrez-vous sur les <span class="ia">clients qui rapportent vraiment</span></h1>
+                <p>Automatisez vos réponses clients, qualifiez vos leads et relancez automatiquement. L'IA travaille pour vous 24h/24.</p>
+                <div class="hero-cta">
+                    <a href="contact.html?service=automatisation" class="btn-ia">
+                        Demander un audit IA
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/33766880019" class="btn-whatsapp" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label ia">Pourquoi l'IA ?</span>
+                <h2 class="section-title">Ce que l'IA peut faire pour <span class="highlight">vous</span></h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Réponses automatiques 24/7</h3>
+                        <p>L'IA répond instantanément aux demandes simples. Vos clients n'attendent plus.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Qualification des prospects</h3>
+                        <p>L'IA trie vos leads : chaud, tiède, froid. Vous ne perdez plus de temps sur les mauvais contacts.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Relances intelligentes</h3>
+                        <p>Plus de prospects oubliés. L'IA relance automatiquement au bon moment, par le bon canal.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Gain de temps massif</h3>
+                        <p>Libérez des heures chaque semaine. Concentrez-vous sur ce qui compte vraiment.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Connexion à vos outils</h3>
+                        <p>Email, WhatsApp, CRM, formulaires... L'IA s'intègre à votre écosystème existant.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon ia">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Suivi des conversions</h3>
+                        <p>Tableaux de bord clairs. Voyez exactement ce qui fonctionne et ce qui peut être amélioré.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="offres">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label ia">Offres</span>
+                <h2 class="section-title">Choisissez la solution adaptée à votre business</h2>
+                <p class="section-description">3 offres claires, orientées résultats et retour sur investissement.</p>
+            </div>
+
+            <div class="ia-pricing-grid">
+                <!-- Offre 1: Core -->
+                <div class="ia-pricing-card featured">
+                    <div class="badge">La plus demandée</div>
+                    <h3>Automatisation IA des demandes clients</h3>
+                    <p class="subtitle">L'IA gère vos emails et messages automatiquement</p>
+
+                    <div class="problem-promise">
+                        <div class="problem-box">
+                            <h4>Problème</h4>
+                            <ul>
+                                <li>Trop d'emails / messages</li>
+                                <li>Réponses lentes</li>
+                                <li>Prospects perdus</li>
+                            </ul>
+                        </div>
+                        <div class="promise-box">
+                            <h4>Promesse</h4>
+                            <p>Vous ne répondez qu'aux vrais prospects. Le reste est géré automatiquement.</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-features">
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>IA qui lit emails / formulaires / WhatsApp</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Réponses automatiques aux demandes simples</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Qualification des prospects</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Notification humaine si nécessaire</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Connexion aux outils existants</span>
+                        </div>
+                    </div>
+
+                    <div class="ia-price-display">
+                        <div class="ia-price-row">
+                            <span class="ia-price-label">Setup</span>
+                            <span class="ia-price-value">2 500 – 5 000 €</span>
+                        </div>
+                        <div class="ia-price-row">
+                            <span class="ia-price-label">Mensuel</span>
+                            <span class="ia-price-value">300 – 800 €/mois</span>
+                        </div>
+                    </div>
+
+                    <a href="contact.html?offer=ia-demandes" class="btn-ia-card">
+                        Voir si c'est pertinent pour vous
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Offre 2: Cash/Performance -->
+                <div class="ia-pricing-card">
+                    <h3>IA de qualification & relance commerciale</h3>
+                    <p class="subtitle">Chaque lead est suivi et relancé automatiquement</p>
+
+                    <div class="problem-promise">
+                        <div class="problem-box">
+                            <h4>Problème</h4>
+                            <ul>
+                                <li>Leads mal exploités</li>
+                                <li>Pas de relance</li>
+                                <li>Opportunités perdues</li>
+                            </ul>
+                        </div>
+                        <div class="promise-box">
+                            <h4>Promesse</h4>
+                            <p>Chaque lead est suivi, relancé et qualifié automatiquement.</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-features">
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>IA qui analyse les leads entrants</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Qualification automatique (chaud / tiède / froid)</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Relances intelligentes (email / WhatsApp)</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Résumés clairs pour l'humain</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Suivi des conversions</span>
+                        </div>
+                    </div>
+
+                    <div class="ia-price-display">
+                        <div class="ia-price-row">
+                            <span class="ia-price-label">Setup</span>
+                            <span class="ia-price-value">1 500 – 4 000 €</span>
+                        </div>
+                        <div class="ia-price-row">
+                            <span class="ia-price-label">Mensuel</span>
+                            <span class="ia-price-value">300 – 700 €/mois</span>
+                        </div>
+                    </div>
+
+                    <a href="contact.html?offer=ia-relance" class="btn-ia-card">
+                        Augmenter mes conversions
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Offre 3: Premium/Stratégique -->
+                <div class="ia-pricing-card">
+                    <h3>Audit & plan d'automatisation IA</h3>
+                    <p class="subtitle">Je vous dis exactement quoi automatiser et dans quel ordre</p>
+
+                    <div class="problem-promise">
+                        <div class="problem-box">
+                            <h4>Problème</h4>
+                            <ul>
+                                <li>Temps perdu</li>
+                                <li>Process flous</li>
+                                <li>Trop d'outils mal utilisés</li>
+                            </ul>
+                        </div>
+                        <div class="promise-box">
+                            <h4>Promesse</h4>
+                            <p>Je vous dis exactement quoi automatiser et dans quel ordre pour gagner le plus.</p>
+                        </div>
+                    </div>
+
+                    <div class="ia-features">
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Audit / explications (60/90min)</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Analyse des process internes</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Identification des tâches automatisables</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Plan d'automatisation priorisé</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Estimation du gain temps / argent</span>
+                        </div>
+                    </div>
+
+                    <div class="ia-price-single">
+                        <div class="amount">500 – 1 200 €</div>
+                        <div class="note">Déduit si mission ensuite</div>
+                    </div>
+
+                    <a href="contact.html?offer=ia-audit" class="btn-ia-card">
+                        Demander un audit IA
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label ia">Comment ça marche</span>
+                <h2 class="section-title">3 étapes simples</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number ia-step">1</div>
+                    <h3>Appel découverte</h3>
+                    <p>On échange 15-30 min pour comprendre vos besoins, vos outils actuels et vos points de friction.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number ia-step">2</div>
+                    <h3>Proposition sur mesure</h3>
+                    <p>Je vous envoie un plan clair : ce que l'IA peut faire pour vous, le coût et le ROI attendu.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number ia-step">3</div>
+                    <h3>Mise en place & suivi</h3>
+                    <p>Je configure tout. Vous validez. L'IA tourne. Je reste disponible pour ajuster et optimiser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label ia">FAQ</span>
+                <h2 class="section-title">Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>L'IA va-t-elle remplacer mes employés ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Non. L'IA gère les tâches répétitives et à faible valeur ajoutée. Vos équipes se concentrent sur ce qui compte : la relation client, la créativité, les décisions stratégiques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quels outils utilisez-vous ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>J'utilise les meilleurs outils selon vos besoins : Make/Zapier pour les automatisations, GPT-5/Claude pour l'IA conversationnelle, et des intégrations natives avec vos CRM, emails et messageries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien de temps pour voir des résultats ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Les premières automatisations sont opérationnelles en 1 à 2 semaines. Les gains de temps sont immédiats. L'optimisation continue améliore les résultats au fil du temps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Et si l'IA fait des erreurs ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>L'IA est configurée avec des garde-fous. Pour les cas complexes ou sensibles, elle vous notifie plutôt que d'agir seule. Vous gardez toujours le contrôle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Mes données sont-elles sécurisées ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Oui. J'utilise uniquement des services conformes RGPD. Vos données restent les vôtres. Aucune information n'est partagée ou utilisée pour entraîner des modèles tiers.</p>
+                        </div>
+                    </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pourquoi un abonnement mensuel est-il nécessaire ?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>L’abonnement couvre les outils (API, automatisations, hébergement), la maintenance, les ajustements et l’optimisation continue. Sans abonnement, l’automatisation ne peut pas fonctionner de manière fiable dans le temps.</p>
+                        </div>
+                    </div>
+                </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section ia">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à automatiser votre business ?</h2>
+                <p>Audit gratuit en 15 minutes. Vous saurez exactement si l’automatisation est rentable pour vous.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html?service=automatisation" class="btn-white">
+                        Demander un audit IA gratuit
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/33766880019" class="btn-outline-white" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp direct
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>© 2025 <span class="brand-yann">Yann</span><span class="brand-service">Service</span></p>
+                </div>
+                <div class="footer-right">
+                    <a href="tarifs.html" class="footer-link">Tarifs</a>
+                    <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+                    <a href="cgv.html" class="footer-link">CGV</a>
+                    <a href="confidentialite.html" class="footer-link">Confidentialité</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+					<a href="propos.html" class="footer-link">A propos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <div class="sticky-mobile-cta-content">
+            <a href="tel:+33766880019" class="sticky-btn sticky-btn-call">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                <span>Appeler</span>
+            </a>
+            <a href="https://wa.me/33766880019" class="sticky-btn sticky-btn-whatsapp" target="_blank" rel="noopener">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>WhatsApp</span>
+            </a>
+            <a href="contact.html?service=automatisation" class="sticky-btn sticky-btn-devis">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <span>Devis</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="js/script.js?v=4.0"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17862446693"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17862446693');
+    </script>
+</body>
+</html>
