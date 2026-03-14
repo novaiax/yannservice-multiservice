@@ -1002,8 +1002,9 @@ button {
 
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 100%;
+        padding: 0 1rem;
     }
 
     .services-grid .service-card:nth-child(4),
@@ -2009,7 +2010,8 @@ button {
 @media (max-width: 768px) {
     .pricing-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 100%;
+        padding: 0 1rem;
     }
 }
 
@@ -4246,7 +4248,35 @@ button {
     }
 
     .service-card {
-        padding: var(--space-xl);
+        padding: var(--space-lg);
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .services-grid {
+        overflow: hidden;
+    }
+
+    .service-card .service-price {
+        white-space: normal !important;
+        font-size: 1.4rem;
+    }
+
+    .service-card .btn-primary,
+    .service-card .btn-urgency {
+        white-space: normal !important;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+    }
+
+    .service-card p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
@@ -4389,22 +4419,40 @@ button {
 
 /* Homepage 4-card grid — 2x2 */
 .services-grid.services-grid--four {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1080px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    max-width: 900px !important;
     margin: 0 auto;
 }
 
 .services-grid--four .service-card:nth-child(4),
 .services-grid--four .service-card:nth-child(5) {
-    justify-self: stretch;
-    max-width: none;
-    grid-column: auto;
+    justify-self: stretch !important;
+    max-width: none !important;
+    grid-column: auto !important;
 }
 
 @media (max-width: 768px) {
     .services-grid.services-grid--four {
+        grid-template-columns: minmax(0, 1fr) !important;
+        max-width: 100% !important;
+        padding: 0 1rem;
+    }
+
+    .services-grid--four .service-card {
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+.testimonials-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid--two {
         grid-template-columns: 1fr;
-        max-width: 400px;
     }
 }
 

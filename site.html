@@ -12,8 +12,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta name="description" content="Création de site web complet orienté conversion. 3 à 10 pages, design mobile-first, SEO local inclus. À partir de 799 €.">
-    <title>Création Site Web Complet | YannService</title>
+    <meta name="description" content="Création site internet professionnel 5-8 pages à 999 €. Design mobile-first, SEO local, tracking GA4, livré en 7 jours. Satisfait ou remboursé.">
+    <meta name="keywords" content="création site web, site internet professionnel, site vitrine, site web pas cher, création site internet, site web entreprise, site web artisan, site web PME">
+    <title>Création Site Internet Professionnel à 999€ | Livré en 7 jours | YannService</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Site Internet Professionnel 999€ | Livré en 7 jours | YannService">
+    <meta property="og:description" content="Site web 5-8 pages orienté conversion. Design mobile-first, SEO local, tracking GA4 inclus. Satisfait ou remboursé.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yannservice.com/site.html">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=4.0">
+    <link rel="stylesheet" href="css/style.css?v=4.5">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
@@ -72,8 +79,8 @@
         <div class="container">
             <div class="page-header-content">
                 <span class="section-label">Sites Web</span>
-                <h1>Un site complet qui <span class="highlight">génère des demandes</span></h1>
-                <p>Site rapide, clair et orienté conversion. Design premium mobile-first, SEO local de base, structure optimisée pour vos clients.</p>
+                <h1>Création de site internet qui <span class="highlight">génère des demandes</span></h1>
+                <p>Site professionnel 5-8 pages, orienté conversion. Design mobile-first, SEO local, tracking GA4 inclus. L'offre Site Pro regroupe tout ce dont votre entreprise a besoin : 999 €, livré en 7 jours.</p>
                 <div class="hero-cta">
                     <a href="contact.html?service=site" class="btn-primary">
                         Demander un devis
@@ -97,7 +104,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Ce qui est inclus</span>
-                <h2 class="section-title">Un site <span class="highlight">professionnel</span></h2>
+                <h2 class="section-title">Votre site internet <span class="highlight">professionnel</span> clé en main</h2>
             </div>
 
             <div class="features-grid">
@@ -185,6 +192,12 @@
     </section>
 
     <!-- Pricing Section -->
+    <style>
+        .pricing-premium-solo {
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+    </style>
     <section class="pricing" id="tarifs">
         <div class="container">
             <div class="section-header">
@@ -194,17 +207,18 @@
             </div>
 
             <div class="pricing-grid">
-                <!-- Starter -->
-                <div class="pricing-card">
+                <!-- Starter (grisée, barrée) -->
+                <div class="pricing-card" style="opacity: 0.5; position: relative;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); background: rgba(255,255,255,0.9); padding: 0.5rem 1.5rem; border-radius: 8px; border: 2px solid var(--color-primary); z-index: 2; white-space: nowrap;">Inclus dans Site Pro</div>
                     <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <p class="pricing-description">Site vitrine efficace pour votre activité</p>
+                        <h3 style="text-decoration: line-through;">Starter</h3>
+                        <p class="pricing-description">Site vitrine basique</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-amount">799 €</span>
+                        <span class="price-amount" style="text-decoration: line-through;">799 €</span>
                         <span class="price-delivery">3-5 pages</span>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricing-features" style="text-decoration: line-through;">
                         <div class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -229,39 +243,97 @@
                             </svg>
                             <span>SEO de base</span>
                         </div>
-                        <div class="feature-item">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Mise en ligne incluse</span>
-                        </div>
                     </div>
-                    <a href="contact.html?offer=site-starter" class="btn-pricing">Choisir Starter</a>
                 </div>
 
-                <!-- Business -->
-                <div class="pricing-card recommended">
-                    <div class="recommended-badge">Recommandé</div>
+                <!-- Site Pro (offre spéciale, carte centrale) -->
+                <div class="pricing-card recommended" style="transform: scale(1.05); border: 2px solid var(--color-primary);">
+                    <div class="recommended-badge" style="background: linear-gradient(135deg, #ff6b35, #f7c948); font-size: 0.85rem; padding: 0.4rem 1.2rem;">Offre Spéciale</div>
                     <div class="pricing-header">
-                        <h3>Business</h3>
-                        <p class="pricing-description">Site complet pensé pour convertir</p>
+                        <h3>Site Pro</h3>
+                        <p class="pricing-description">Starter + Business réunis en une seule offre</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-amount">1 299 €</span>
-                        <span class="price-delivery">5-8 pages</span>
+                        <span class="price-amount">999 €</span>
+                        <span class="price-delivery">5-8 pages · Livré en 7 jours</span>
                     </div>
+                    <p style="font-size: 0.8rem; color: #16a34a; font-weight: 600; margin: -0.5rem 0 0.5rem; text-align: center;">Satisfait ou remboursé, aucun risque</p>
                     <div class="pricing-features">
                         <div class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span><strong>Tout le pack Starter</strong></span>
+                            <span>Accueil + pages sur mesure</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Design mobile-first</span>
                         </div>
                         <div class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             <span><strong>Landing pages intégrées</strong></span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Formulaire de contact</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>SEO de base + tracking GA4</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Blog ou galerie</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Mise en ligne incluse</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span><strong>30 jours de support premium</strong></span>
+                        </div>
+                    </div>
+                    <a href="contact.html?offer=site-pro" class="btn-pricing" style="background: var(--color-primary); color: white; font-size: 1rem;">Voir ma démo</a>
+                </div>
+
+                <!-- Business (grisée, barrée) -->
+                <div class="pricing-card" style="opacity: 0.5; position: relative;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); background: rgba(255,255,255,0.9); padding: 0.5rem 1.5rem; border-radius: 8px; border: 2px solid var(--color-primary); z-index: 2; white-space: nowrap;">Inclus dans Site Pro</div>
+                    <div class="pricing-header">
+                        <h3 style="text-decoration: line-through;">Business</h3>
+                        <p class="pricing-description">Site complet pensé pour convertir</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" style="text-decoration: line-through;">1 299 €</span>
+                        <span class="price-delivery">5-8 pages</span>
+                    </div>
+                    <div class="pricing-features" style="text-decoration: line-through;">
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Tout le pack Starter</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Landing pages intégrées</span>
                         </div>
                         <div class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -282,17 +354,18 @@
                             <span>30 jours de support</span>
                         </div>
                     </div>
-                    <a href="contact.html?offer=site-business" class="btn-pricing">Choisir Business</a>
                 </div>
+            </div>
 
-                <!-- Premium -->
-                <div class="pricing-card">
+            <!-- Premium - carte seule en dessous -->
+            <div class="pricing-premium-solo">
+                <div class="pricing-card" style="border: 2px solid var(--color-text-secondary);">
                     <div class="pricing-header">
                         <h3>Premium</h3>
                         <p class="pricing-description">Site sur-mesure avec intégrations avancées</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-amount">1 999 €</span>
+                        <span class="price-amount">Dès 1 999 €</span>
                         <span class="price-delivery">8-10+ pages</span>
                     </div>
                     <div class="pricing-features">
@@ -300,7 +373,7 @@
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span><strong>Tout le pack Business</strong></span>
+                            <span><strong>Tout le pack Site Pro</strong></span>
                         </div>
                         <div class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -326,10 +399,23 @@
                             </svg>
                             <span>60 jours de support VIP</span>
                         </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span><strong>Choix site dynamique ou statique</strong></span>
+                        </div>
                     </div>
                     <a href="contact.html?offer=site-premium" class="btn-pricing">Choisir Premium</a>
                 </div>
             </div>
+
+            <!-- Maintenance note -->
+            <p style="text-align: center; margin-top: 2rem; color: var(--color-text-secondary); font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <strong>Maintenance mensuelle disponible</strong> : mises à jour régulières, modifications incluses dans votre forfait et conformité RGPD assurée.
+                <a href="tarifs.html#abonnements" style="color: var(--color-primary); text-decoration: underline; font-weight: 600;">Voir les abonnements</a>
+            </p>
+            <p style="text-align: center; margin-top: 0.5rem; color: var(--gray-400); font-size: 0.75rem;">Les offres Starter et Business sont des sites statiques uniquement.</p>
         </div>
     </section>
 
@@ -341,7 +427,7 @@
                 <h2 class="section-title">Ce qu'ils disent</h2>
             </div>
 
-            <div class="testimonials-grid">
+            <div class="testimonials-grid testimonials-grid--two">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="#FFB800"><path d="M10 1.66667L12.575 6.88333L18.3333 7.725L14.1667 11.7833L15.15 17.5167L10 14.8083L4.85 17.5167L5.83333 11.7833L1.66667 7.725L7.425 6.88333L10 1.66667Z"/></svg>
@@ -385,7 +471,7 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Prêt à avoir un site qui convertit ?</h2>
+                <h2>Prêt à lancer votre site internet professionnel ?</h2>
                 <p>Demandez un devis gratuit. Réponse sous 24h.</p>
                 <p class="cta-sub-text">La majorité de mes clients continuent ensuite sur un <a href="tarifs.html#abonnements" class="cta-sub-link">suivi mensuel</a>.</p>
                 <div class="cta-buttons">
