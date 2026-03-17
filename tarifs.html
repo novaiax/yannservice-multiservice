@@ -238,126 +238,128 @@
 			</div>
 
 			<!-- Modale détail abonnements -->
-			<div id="modalDetailAbonnements" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; align-items: center; justify-content: center; padding: 1rem;">
-				<div style="background: var(--white); border-radius: 8px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative;">
+			<div id="modalDetailAbonnements" class="modal-overlay">
+				<div class="modal-detail-inner">
 
 					<!-- Bouton fermer -->
-					<button id="btnCloseDetail" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--gray-500);">
+					<button id="btnCloseDetail" class="modal-close-btn">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
 					</button>
 
-					<h3 style="font-size: 1.25rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem;">Que couvre chaque abonnement ?</h3>
-					<p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 2rem;">Comparatif détaillé des 3 formules de suivi mensuel.</p>
+					<h3 class="modal-title">Que couvre chaque abonnement ?</h3>
+					<p class="modal-subtitle">Comparatif détaillé des 3 formules de suivi mensuel.</p>
 
-					<!-- Tableau comparatif -->
-					<div style="overflow-x: auto;">
-						<table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
-							<thead>
-								<tr style="border-bottom: 2px solid var(--gray-200);">
-									<th style="text-align: left; padding: 0.75rem 1rem; color: var(--gray-500); font-weight: 500; min-width: 200px;"></th>
-									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black);">Essentiel<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">19€/mois</span></th>
-									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black); background: var(--gray-50); border-radius: 8px 8px 0 0;">Premium<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">79€/mois</span></th>
-									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black);">VIP<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">149€/mois</span></th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- Hébergement & infra -->
-								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Hébergement & infrastructure</td></tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Hébergement sécurisé (SSL)</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Nom de domaine inclus</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Sauvegardes automatiques</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Surveillance & stabilité 24/7</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Mises à jour de sécurité</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
+					<!-- 3 cartes au lieu du tableau -->
+					<div class="modal-cards-grid">
 
-								<!-- Modifications -->
-								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Modifications du site</td></tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Modifications incluses</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; font-weight: 600; color: var(--black); background: var(--gray-50);">50 / mois</td>
-									<td style="text-align: center; font-weight: 600; color: var(--black);">Illimitées</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Textes, photos, visuels</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Ajustements de mise en page</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Ajout de nouvelles sections</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--gray-400); background: var(--gray-50);">&#10007;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
+						<!-- Essentiel -->
+						<div class="modal-card">
+							<div class="modal-card-header">
+								<h4>Essentiel</h4>
+								<span class="modal-card-price">19€<small>/mois</small></span>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Hébergement & infra</span>
+								<ul>
+									<li class="included">Hébergement sécurisé (SSL)</li>
+									<li class="included">Nom de domaine inclus</li>
+									<li class="included">Sauvegardes automatiques</li>
+									<li class="included">Surveillance 24/7</li>
+									<li class="included">Mises à jour de sécurité</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Modifications</span>
+								<ul>
+									<li class="excluded">Aucune modification incluse</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Support</span>
+								<ul>
+									<li class="neutral">Support critique uniquement</li>
+									<li class="excluded">Conseil & accompagnement</li>
+									<li class="excluded">Rapport mensuel</li>
+									<li class="excluded">Conformité RGPD</li>
+								</ul>
+							</div>
+							<div class="modal-card-footer">Engagement 12 mois</div>
+						</div>
 
-								<!-- Support -->
-								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Support & accompagnement</td></tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Support technique</td>
-									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-500);">Critique uniquement</td>
-									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600); background: var(--gray-50);">Sous 72h</td>
-									<td style="text-align: center; font-size: 0.8rem; font-weight: 600; color: var(--black);">Prioritaire 24h</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Conseil & accompagnement</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Rapport mensuel</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
-								<tr style="border-bottom: 1px solid var(--gray-100);">
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Conformité RGPD à jour</td>
-									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
-									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
-									<td style="text-align: center; color: var(--success);">&#10003;</td>
-								</tr>
+						<!-- Premium -->
+						<div class="modal-card modal-card--featured">
+							<div class="modal-card-badge">Le plus populaire</div>
+							<div class="modal-card-header">
+								<h4>Premium</h4>
+								<span class="modal-card-price">79€<small>/mois</small></span>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Hébergement & infra</span>
+								<ul>
+									<li class="included">Hébergement sécurisé (SSL)</li>
+									<li class="included">Nom de domaine inclus</li>
+									<li class="included">Sauvegardes automatiques</li>
+									<li class="included">Surveillance 24/7</li>
+									<li class="included">Mises à jour de sécurité</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Modifications</span>
+								<ul>
+									<li class="included"><strong>50 modifications / mois</strong></li>
+									<li class="included">Textes, photos, visuels</li>
+									<li class="included">Ajustements de mise en page</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Support</span>
+								<ul>
+									<li class="included">Support sous 72h</li>
+									<li class="included">Conseil & accompagnement</li>
+									<li class="included">Rapport mensuel</li>
+									<li class="included">Conformité RGPD à jour</li>
+								</ul>
+							</div>
+							<div class="modal-card-footer">Engagement 12 mois</div>
+						</div>
 
-								<!-- Engagement -->
-								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Engagement</td></tr>
-								<tr>
-									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Durée d'engagement</td>
-									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600);">12 mois</td>
-									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600); background: var(--gray-50); border-radius: 0 0 8px 8px;">12 mois</td>
-									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600);">12 mois</td>
-								</tr>
-							</tbody>
-						</table>
+						<!-- VIP -->
+						<div class="modal-card">
+							<div class="modal-card-header">
+								<h4>VIP</h4>
+								<span class="modal-card-price">149€<small>/mois</small></span>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Hébergement & infra</span>
+								<ul>
+									<li class="included">Hébergement sécurisé (SSL)</li>
+									<li class="included">Nom de domaine inclus</li>
+									<li class="included">Sauvegardes automatiques</li>
+									<li class="included">Surveillance 24/7</li>
+									<li class="included">Mises à jour de sécurité</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Modifications</span>
+								<ul>
+									<li class="included"><strong>Modifications illimitées</strong></li>
+									<li class="included">Textes, photos, visuels</li>
+									<li class="included">Ajustements de mise en page</li>
+									<li class="included">Ajout de nouvelles sections</li>
+								</ul>
+							</div>
+							<div class="modal-card-section">
+								<span class="modal-card-label">Support</span>
+								<ul>
+									<li class="included"><strong>Support prioritaire 24h</strong></li>
+									<li class="included">Conseil & accompagnement</li>
+									<li class="included">Rapport mensuel</li>
+									<li class="included">Conformité RGPD à jour</li>
+								</ul>
+							</div>
+							<div class="modal-card-footer">Engagement 12 mois</div>
+						</div>
+
 					</div>
 
 					<div style="margin-top: 2rem; text-align: center;">
