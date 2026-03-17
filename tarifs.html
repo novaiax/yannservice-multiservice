@@ -151,7 +151,7 @@
 						</li>
 						<li>
 							<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-							<strong>5 heures de modifications / mois</strong>
+							<strong>50 modifications / mois</strong>
 						</li>
 						<li>
 							<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50002 14.1667L3.33335 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -198,6 +198,143 @@
 					<a href="contact.html?service=abonnement-prioritaire" class="btn-secondary" style="width: 100%; justify-content: center;">Choisir</a>
 				</div>
 
+			</div>
+
+			<!-- Bouton détail abonnements -->
+			<div style="text-align: center; margin-top: 2rem;">
+				<button id="btnDetailAbonnements" class="btn-secondary" style="font-size: 0.875rem; gap: 0.5rem;">
+					<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V14M10 6.5V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+					Voir le détail de chaque abonnement
+				</button>
+			</div>
+
+			<!-- Modale détail abonnements -->
+			<div id="modalDetailAbonnements" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; align-items: center; justify-content: center; padding: 1rem;">
+				<div style="background: var(--white); border-radius: 8px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative;">
+
+					<!-- Bouton fermer -->
+					<button id="btnCloseDetail" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--gray-500);">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+					</button>
+
+					<h3 style="font-size: 1.25rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem;">Que couvre chaque abonnement ?</h3>
+					<p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 2rem;">Comparatif détaillé des 3 formules de suivi mensuel.</p>
+
+					<!-- Tableau comparatif -->
+					<div style="overflow-x: auto;">
+						<table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+							<thead>
+								<tr style="border-bottom: 2px solid var(--gray-200);">
+									<th style="text-align: left; padding: 0.75rem 1rem; color: var(--gray-500); font-weight: 500; min-width: 200px;"></th>
+									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black);">Essentiel<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">19€/mois</span></th>
+									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black); background: var(--gray-50); border-radius: 8px 8px 0 0;">Premium<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">79€/mois</span></th>
+									<th style="text-align: center; padding: 0.75rem 0.5rem; font-weight: 700; color: var(--black);">VIP<br><span style="font-weight: 400; color: var(--gray-500); font-size: 0.8rem;">149€/mois</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Hébergement & infra -->
+								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Hébergement & infrastructure</td></tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Hébergement sécurisé (SSL)</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Nom de domaine inclus</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Sauvegardes automatiques</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Surveillance & stabilité 24/7</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Mises à jour de sécurité</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+
+								<!-- Modifications -->
+								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Modifications du site</td></tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Modifications incluses</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; font-weight: 600; color: var(--black); background: var(--gray-50);">50 / mois</td>
+									<td style="text-align: center; font-weight: 600; color: var(--black);">Illimitées</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Textes, photos, visuels</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Ajustements de mise en page</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; color: var(--success); background: var(--gray-50);">&#10003;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Ajout de nouvelles sections</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; color: var(--gray-400); background: var(--gray-50);">&#10007;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+
+								<!-- Support -->
+								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Support & accompagnement</td></tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Support technique</td>
+									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-500);">Critique uniquement</td>
+									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600); background: var(--gray-50);">Sous 72h</td>
+									<td style="text-align: center; font-size: 0.8rem; font-weight: 600; color: var(--black);">Prioritaire 24h</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Conseil & accompagnement</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; color: var(--gray-400); background: var(--gray-50);">&#10007;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+								<tr style="border-bottom: 1px solid var(--gray-100);">
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Rapport mensuel</td>
+									<td style="text-align: center; color: var(--gray-400);">&#10007;</td>
+									<td style="text-align: center; color: var(--gray-400); background: var(--gray-50);">&#10007;</td>
+									<td style="text-align: center; color: var(--success);">&#10003;</td>
+								</tr>
+
+								<!-- Engagement -->
+								<tr style="background: var(--gray-50);"><td colspan="4" style="padding: 0.5rem 1rem; font-weight: 600; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Engagement</td></tr>
+								<tr>
+									<td style="padding: 0.6rem 1rem; color: var(--gray-600);">Durée d'engagement</td>
+									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600);">12 mois</td>
+									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600); background: var(--gray-50); border-radius: 0 0 8px 8px;">12 mois</td>
+									<td style="text-align: center; font-size: 0.8rem; color: var(--gray-600);">12 mois</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div style="margin-top: 2rem; text-align: center;">
+						<a href="contact.html" class="btn-primary" style="font-size: 0.875rem;">
+							Choisir un abonnement
+							<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+        </div>
     </section>
 
     <!-- Modifications Section -->
@@ -549,5 +686,32 @@
     </div>
 
     <script src="js/script.js?v=5.0"></script>
+    <script>
+    // Modale détail abonnements
+    (function() {
+        const btn = document.getElementById('btnDetailAbonnements');
+        const modal = document.getElementById('modalDetailAbonnements');
+        const btnClose = document.getElementById('btnCloseDetail');
+        if (!btn || !modal) return;
+
+        btn.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        btnClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+        });
+    })();
+    </script>
 </body>
 </html>
