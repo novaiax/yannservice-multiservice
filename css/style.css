@@ -1843,6 +1843,11 @@ button {
     max-width: 900px;
 }
 
+.pricing-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 780px;
+}
+
 .pricing-card {
     display: flex;
     flex-direction: column;
@@ -2008,7 +2013,8 @@ button {
 }
 
 @media (max-width: 768px) {
-    .pricing-grid {
+    .pricing-grid,
+    .pricing-grid--two {
         grid-template-columns: 1fr;
         max-width: 100%;
         padding: 0 1rem;
