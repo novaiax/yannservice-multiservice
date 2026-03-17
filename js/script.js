@@ -8,10 +8,8 @@ console.log('%c YANNWZSERVICE.COM - Site de conversion', 'color: #0066FF; font-s
 // FIX: Supprimer les scrollbars internes
 // ===================================
 (function() {
-    // Fonction pour forcer overflow visible sur tous les éléments
     function fixOverflow() {
-        const allElements = document.querySelectorAll('section, div, main, article, aside, .container');
-        allElements.forEach(el => {
+        document.querySelectorAll('section, div, main, article, aside, .container').forEach(el => {
             const style = window.getComputedStyle(el);
             if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
                 el.style.overflowY = 'visible';
@@ -21,17 +19,12 @@ console.log('%c YANNWZSERVICE.COM - Site de conversion', 'color: #0066FF; font-s
             }
         });
     }
-
-    // Exécuter au chargement
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', fixOverflow);
     } else {
         fixOverflow();
     }
-
-    // Exécuter aussi après un court délai (pour les éléments chargés dynamiquement)
-    setTimeout(fixOverflow, 100);
-    setTimeout(fixOverflow, 500);
+    setTimeout(fixOverflow, 200);
 })();
 
 // ===================================
@@ -98,30 +91,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const offset = 80;
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
+            // Smooth scroll natif
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
+
+            // Fermer le menu mobile si ouvert
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
+            }
         }
     });
 });
 
 // ===================================
-// NAVIGATION SCROLL EFFECT
+// NAVIGATION SCROLL EFFECT (RAF-based)
 // ===================================
 
 const nav = document.querySelector('.nav');
+let lastScrollY = 0;
+let navTicking = false;
 
-function handleNavScroll() {
-    if (window.scrollY > 10) {
+function updateNav() {
+    if (lastScrollY > 10) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
+    navTicking = false;
 }
 
-window.addEventListener('scroll', throttle(handleNavScroll, 100));
-handleNavScroll();
+window.addEventListener('scroll', function() {
+    lastScrollY = window.scrollY;
+    if (!navTicking) {
+        requestAnimationFrame(updateNav);
+        navTicking = true;
+    }
+}, { passive: true });
+updateNav();
 
 // ===================================
 // FAQ ACCORDION
@@ -389,33 +398,29 @@ window.nextImage = nextImage;
 
 // ===================================
 // INTERSECTION OBSERVER FOR ANIMATIONS
+// GPU-accelerated avec classe CSS
 // ===================================
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
+            scrollObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+});
 
-// Observe elements for fade-in animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll(
-        '.service-card, .proof-card, .process-step, .testimonial-card, .pricing-card, .example-card, .feature-card, .faq-item'
+        '.service-card, .proof-card, .process-step, .testimonial-card, .pricing-card, .example-card, .feature-card, .faq-item, .section-header, .ap-profile-card, .cta-content'
     );
 
     animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        el.classList.add('fade-in-up');
+        scrollObserver.observe(el);
     });
 });
 
@@ -435,12 +440,24 @@ if ('IntersectionObserver' in window) {
                 imageObserver.unobserve(img);
             }
         });
+    }, {
+        rootMargin: '200px 0px'
     });
 
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
 }
+
+// Ajouter loading="lazy" et decoding="async" aux images hors viewport
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img:not([loading])').forEach((img, i) => {
+        if (i > 2) {
+            img.loading = 'lazy';
+            img.decoding = 'async';
+        }
+    });
+});
 
 // ===================================
 // UTILITY FUNCTIONS

@@ -108,6 +108,16 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 body {
@@ -117,6 +127,7 @@ body {
     color: var(--gray-600);
     background: var(--white);
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 768px) {
@@ -210,12 +221,13 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.98);
     border-bottom: 1px solid var(--gray-200);
     z-index: 1000;
     transition: box-shadow var(--transition);
+    will-change: box-shadow;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .nav.scrolled {
@@ -261,7 +273,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 3s ease-in-out 1;
 }
 
 .brand-service {
@@ -280,7 +292,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 3s ease-in-out 1;
     display: block;
     margin-top: 2px;
 }
@@ -3660,7 +3672,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 3s ease-in-out 1;
     font-size: 0.8125rem;
 }
 
@@ -3701,7 +3713,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 3s ease-in-out 1;
     font-size: 0.8125rem;
 }
 
@@ -4477,4 +4489,55 @@ button {
 
 .cta-sub-link:hover {
     color: var(--gray-300);
+}
+
+/* ===================================
+   PERFORMANCE — Scroll fluide & GPU
+   =================================== */
+
+/* Animations d'apparition au scroll */
+.fade-in-up {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Stagger delays pour les grilles */
+.fade-in-up:nth-child(1) { transition-delay: 0ms; }
+.fade-in-up:nth-child(2) { transition-delay: 80ms; }
+.fade-in-up:nth-child(3) { transition-delay: 160ms; }
+.fade-in-up:nth-child(4) { transition-delay: 240ms; }
+.fade-in-up:nth-child(5) { transition-delay: 320ms; }
+.fade-in-up:nth-child(6) { transition-delay: 400ms; }
+
+/* GPU acceleration pour éléments interactifs */
+.service-card,
+.pricing-card,
+.testimonial-card,
+.proof-card,
+.process-step,
+.example-card,
+.feature-card,
+.faq-item {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Images fluides */
+img {
+    content-visibility: auto;
+}
+
+/* Sections — optimisation rendu */
+section {
+    contain: layout style;
 }
