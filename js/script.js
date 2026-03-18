@@ -10,6 +10,8 @@ console.log('%c YANNWZSERVICE.COM - Site de conversion', 'color: #0066FF; font-s
 (function() {
     function fixOverflow() {
         document.querySelectorAll('section, div, main, article, aside, .container').forEach(el => {
+            // Ne pas toucher aux modales et leurs contenus
+            if (el.classList.contains('modal-overlay') || el.classList.contains('modal-detail-inner') || el.closest('.modal-overlay')) return;
             const style = window.getComputedStyle(el);
             if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
                 el.style.overflowY = 'visible';
