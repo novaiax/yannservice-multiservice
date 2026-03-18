@@ -4568,7 +4568,7 @@ section {
 .modal-detail-inner {
     background: var(--white);
     border-radius: 16px;
-    max-width: 1020px;
+    max-width: 1060px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
@@ -4576,12 +4576,11 @@ section {
     padding: 2.5rem 2.5rem 2rem;
     position: relative;
     -webkit-overflow-scrolling: touch;
-}
 
 .modal-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    position: sticky;
+    top: 0;
+    float: right;
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: 50%;
@@ -4589,11 +4588,12 @@ section {
     padding: 0.5rem;
     color: var(--gray-500);
     z-index: 2;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: -40px;
 }
 
 .modal-close-btn:hover {
@@ -4606,6 +4606,7 @@ section {
     font-weight: 700;
     color: var(--black);
     margin-bottom: 0.35rem;
+    padding-right: 3rem;
 }
 
 .modal-subtitle {
@@ -4618,7 +4619,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .modal-card {
@@ -4627,6 +4628,8 @@ section {
     padding: 1.5rem 1.25rem;
     position: relative;
     background: var(--white);
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-card--featured {
@@ -4687,6 +4690,10 @@ section {
     margin-bottom: 1rem;
 }
 
+.modal-card-section:last-of-type {
+    flex: 1;
+}
+
 .modal-card-label {
     display: block;
     font-size: 0.7rem;
@@ -4744,7 +4751,7 @@ section {
 }
 
 .modal-card-footer {
-    margin-top: 1rem;
+    margin-top: auto;
     padding-top: 0.75rem;
     border-top: 1px solid var(--gray-200);
     font-size: 0.75rem;
@@ -4752,16 +4759,79 @@ section {
     text-align: center;
 }
 
-/* ── Tablette (768px - 1024px) ── */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* ── Tablette paysage (769px - 1024px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
     #modalDetailAbonnements {
         padding: 1rem;
     }
 
     .modal-detail-inner {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.75rem;
+        max-height: 92vh;
+        max-width: 720px;
+    }
+
+    .modal-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Sur tablette, on rend les cartes plus compactes en layout horizontal */
+    .modal-card {
+        padding: 1.25rem;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        gap: 0 1.5rem;
+    }
+
+    .modal-card-header {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        border-bottom: none;
+        border-right: 1px solid var(--gray-200);
+        padding-right: 1.5rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-card-section,
+    .modal-card-footer {
+        grid-column: 2;
+    }
+
+    .modal-card-badge {
+        top: -10px;
+        left: auto;
+        right: 1rem;
+        transform: none;
+    }
+}
+
+/* ── Tablette portrait / Grand mobile (481px - 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+    #modalDetailAbonnements {
+        padding: 0.75rem;
+        align-items: center;
+    }
+
+    .modal-detail-inner {
+        padding: 2rem 1.5rem 1.5rem;
         max-height: 90vh;
-        max-width: 600px;
+        max-width: 560px;
+    }
+
+    .modal-title {
+        font-size: 1.2rem;
+        padding-right: 3rem;
+    }
+
+    .modal-subtitle {
+        margin-bottom: 1.5rem;
     }
 
     .modal-cards-grid {
@@ -4771,30 +4841,6 @@ section {
 
     .modal-card {
         padding: 1.25rem;
-    }
-}
-
-/* ── Grand mobile (481px - 767px) ── */
-@media (min-width: 481px) and (max-width: 767px) {
-    #modalDetailAbonnements {
-        padding: 0.75rem;
-        align-items: flex-start;
-        padding-top: 1.5rem;
-    }
-
-    .modal-detail-inner {
-        padding: 1.75rem 1.25rem 1.5rem;
-        max-height: 88vh;
-    }
-
-    .modal-title {
-        font-size: 1.15rem;
-        padding-right: 2.5rem;
-    }
-
-    .modal-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     .modal-card-price {
@@ -4810,17 +4856,18 @@ section {
     }
 
     .modal-detail-inner {
-        padding: 1.5rem 1rem 1.25rem;
-        max-height: 92vh;
-        border-radius: 16px 16px 0 0;
+        padding: 1.25rem 1rem 6rem;
+        max-height: 95vh;
+        border-radius: 20px 20px 0 0;
         max-width: 100%;
     }
 
     .modal-close-btn {
-        top: 0.75rem;
-        right: 0.75rem;
-        width: 32px;
-        height: 32px;
+        position: sticky;
+        top: 0;
+        width: 36px;
+        height: 36px;
+        margin-bottom: -36px;
     }
 
     .modal-close-btn svg {
@@ -4829,8 +4876,8 @@ section {
     }
 
     .modal-title {
-        font-size: 1.05rem;
-        padding-right: 2.5rem;
+        font-size: 1.1rem;
+        padding-right: 3rem;
         line-height: 1.3;
     }
 
@@ -4845,12 +4892,12 @@ section {
     }
 
     .modal-card {
-        padding: 1.15rem 1rem;
+        padding: 1rem;
         border-radius: 10px;
     }
 
     .modal-card-header {
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         padding-bottom: 0.75rem;
     }
 
@@ -4883,7 +4930,6 @@ section {
 
     .modal-card-footer {
         font-size: 0.7rem;
-        margin-top: 0.75rem;
         padding-top: 0.6rem;
     }
 
