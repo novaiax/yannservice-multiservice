@@ -4546,18 +4546,22 @@ section {
    MODALE DETAIL ABONNEMENTS — Cartes
    =================================== */
 
-.modal-overlay {
-    display: none;
+#modalDetailAbonnements {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10000;
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 10001;
     padding: 1rem;
+}
+
+#modalDetailAbonnements.active {
+    display: flex;
 }
 
 .modal-detail-inner {
@@ -4777,7 +4781,7 @@ section {
     }
 
     /* Modale cartes abonnements mobile */
-    .modal-overlay {
+    #modalDetailAbonnements {
         padding: 0.5rem;
         align-items: flex-start;
         padding-top: 2rem;

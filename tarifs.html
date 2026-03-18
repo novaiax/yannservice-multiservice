@@ -238,7 +238,7 @@
 			</div>
 
 			<!-- Modale détail abonnements -->
-			<div id="modalDetailAbonnements" class="modal-overlay">
+			<div id="modalDetailAbonnements">
 				<div class="modal-detail-inner">
 
 					<!-- Bouton fermer -->
@@ -735,12 +735,12 @@
         if (!btn || !modal) return;
 
         btn.addEventListener('click', function() {
-            modal.style.display = 'flex';
+            modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
 
         function closeModal() {
-            modal.style.display = 'none';
+            modal.classList.remove('active');
             document.body.style.overflow = '';
         }
 
@@ -749,7 +749,7 @@
             if (e.target === modal) closeModal();
         });
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
         });
     })();
     </script>
