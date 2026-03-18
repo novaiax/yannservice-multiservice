@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=5.0">
+    <link rel="stylesheet" href="css/style.css?v=5.4">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
@@ -239,145 +239,6 @@
 					<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V14M10 6.5V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
 					Voir le détail de chaque abonnement
 				</button>
-			</div>
-
-			<!-- Modale détail abonnements -->
-			<div id="modalDetailAbonnements">
-				<div class="modal-detail-inner">
-
-					<!-- Bouton fermer -->
-					<button id="btnCloseDetail" class="modal-close-btn">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-					</button>
-
-					<h3 class="modal-title">Que couvre chaque abonnement ?</h3>
-					<p class="modal-subtitle">Comparatif détaillé des 3 formules de suivi mensuel.</p>
-
-					<!-- 3 cartes au lieu du tableau -->
-					<div class="modal-cards-grid">
-
-						<!-- Essentiel -->
-						<div class="modal-card">
-							<div class="modal-card-header">
-								<h4>Essentiel</h4>
-								<p class="modal-card-tagline">Votre site est entre de bonnes mains</p>
-								<span class="modal-card-price">19€<small>/mois</small></span>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Hébergement & infra</span>
-								<ul>
-									<li class="included">Hébergement sécurisé (SSL)</li>
-									<li class="included">Nom de domaine inclus</li>
-									<li class="included">Sauvegardes automatiques</li>
-									<li class="included">Surveillance 24/7</li>
-									<li class="included">Mises à jour de sécurité</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Modifications</span>
-								<ul>
-									<li class="excluded">Aucune modification incluse</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Support</span>
-								<ul>
-									<li class="neutral">Support critique uniquement</li>
-									<li class="excluded">Conseil & accompagnement</li>
-									<li class="excluded">Rapport mensuel</li>
-									<li class="excluded">Conformité RGPD</li>
-								</ul>
-							</div>
-							<div class="modal-card-footer">Engagement 12 mois</div>
-						</div>
-
-						<!-- Premium -->
-						<div class="modal-card modal-card--featured">
-							<div class="modal-card-badge">Le plus populaire</div>
-							<div class="modal-card-header">
-								<h4>Premium</h4>
-								<p class="modal-card-tagline">Vous demandez, je m'en occupe</p>
-								<span class="modal-card-price">79€<small>/mois</small></span>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Hébergement & infra</span>
-								<ul>
-									<li class="included">Hébergement sécurisé (SSL)</li>
-									<li class="included">Nom de domaine inclus</li>
-									<li class="included">Sauvegardes automatiques</li>
-									<li class="included">Surveillance 24/7</li>
-									<li class="included">Mises à jour de sécurité</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Modifications</span>
-								<ul>
-									<li class="included"><strong>50 modifications / mois</strong></li>
-									<li class="included">Textes, photos, visuels</li>
-									<li class="included">Ajustements de mise en page</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Support</span>
-								<ul>
-									<li class="included">Support sous 72h</li>
-									<li class="included">Conseil & accompagnement</li>
-									<li class="included">Rapport mensuel</li>
-									<li class="included">Conformité RGPD à jour</li>
-								</ul>
-							</div>
-							<div class="modal-card-footer">Engagement 12 mois</div>
-						</div>
-
-						<!-- VIP -->
-						<div class="modal-card">
-							<div class="modal-card-header">
-								<h4>VIP</h4>
-								<p class="modal-card-tagline">Vous n'avez plus rien à gérer</p>
-								<span class="modal-card-price">149€<small>/mois</small></span>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Hébergement & infra</span>
-								<ul>
-									<li class="included">Hébergement sécurisé (SSL)</li>
-									<li class="included">Nom de domaine inclus</li>
-									<li class="included">Sauvegardes automatiques</li>
-									<li class="included">Surveillance 24/7</li>
-									<li class="included">Mises à jour de sécurité</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Modifications</span>
-								<ul>
-									<li class="included"><strong>Modifications illimitées</strong></li>
-									<li class="included">Textes, photos, visuels</li>
-									<li class="included">Ajustements de mise en page</li>
-									<li class="included">Ajout de nouvelles sections</li>
-									<li class="included">Refonte visuelle de sections</li>
-									<li class="included">Ajout de modules ou fonctionnalités</li>
-								</ul>
-							</div>
-							<div class="modal-card-section">
-								<span class="modal-card-label">Support</span>
-								<ul>
-									<li class="included"><strong>Support prioritaire 24h</strong></li>
-									<li class="included">Conseil & accompagnement</li>
-									<li class="included">Rapport mensuel</li>
-									<li class="included">Conformité RGPD à jour</li>
-								</ul>
-							</div>
-							<div class="modal-card-footer">Engagement 12 mois</div>
-						</div>
-
-					</div>
-
-					<div style="margin-top: 2rem; text-align: center;">
-						<a href="contact.html" class="btn-primary" style="font-size: 0.875rem;">
-							Choisir un abonnement
-							<svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-						</a>
-					</div>
-				</div>
 			</div>
 
         </div>
@@ -728,6 +589,135 @@
                 </svg>
                 <span>Devis</span>
             </a>
+        </div>
+    </div>
+
+    <!-- Modale détail abonnements (hors section pour position:fixed) -->
+    <div id="modalDetailAbonnements">
+        <div class="modal-detail-inner">
+            <button id="btnCloseDetail" class="modal-close-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h3 class="modal-title">Que couvre chaque abonnement ?</h3>
+            <p class="modal-subtitle">Comparatif détaillé des 3 formules de suivi mensuel.</p>
+            <div class="modal-cards-grid">
+                <!-- Essentiel -->
+                <div class="modal-card">
+                    <div class="modal-card-header">
+                        <h4>Essentiel</h4>
+                        <p class="modal-card-tagline">Votre site est entre de bonnes mains</p>
+                        <span class="modal-card-price">19€<small>/mois</small></span>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Hébergement & infra</span>
+                        <ul>
+                            <li class="included">Hébergement sécurisé (SSL)</li>
+                            <li class="included">Nom de domaine inclus</li>
+                            <li class="included">Sauvegardes automatiques</li>
+                            <li class="included">Surveillance 24/7</li>
+                            <li class="included">Mises à jour de sécurité</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Modifications</span>
+                        <ul>
+                            <li class="excluded">Aucune modification incluse</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Support</span>
+                        <ul>
+                            <li class="neutral">Support critique uniquement</li>
+                            <li class="excluded">Conseil & accompagnement</li>
+                            <li class="excluded">Rapport mensuel</li>
+                            <li class="excluded">Conformité RGPD</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-footer">Engagement 12 mois</div>
+                </div>
+                <!-- Premium -->
+                <div class="modal-card modal-card--featured">
+                    <div class="modal-card-badge">Le plus populaire</div>
+                    <div class="modal-card-header">
+                        <h4>Premium</h4>
+                        <p class="modal-card-tagline">Vous demandez, je m'en occupe</p>
+                        <span class="modal-card-price">79€<small>/mois</small></span>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Hébergement & infra</span>
+                        <ul>
+                            <li class="included">Hébergement sécurisé (SSL)</li>
+                            <li class="included">Nom de domaine inclus</li>
+                            <li class="included">Sauvegardes automatiques</li>
+                            <li class="included">Surveillance 24/7</li>
+                            <li class="included">Mises à jour de sécurité</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Modifications</span>
+                        <ul>
+                            <li class="included"><strong>50 modifications / mois</strong></li>
+                            <li class="included">Textes, photos, visuels</li>
+                            <li class="included">Ajustements de mise en page</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Support</span>
+                        <ul>
+                            <li class="included">Support sous 72h</li>
+                            <li class="included">Conseil & accompagnement</li>
+                            <li class="included">Rapport mensuel</li>
+                            <li class="included">Conformité RGPD à jour</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-footer">Engagement 12 mois</div>
+                </div>
+                <!-- VIP -->
+                <div class="modal-card">
+                    <div class="modal-card-header">
+                        <h4>VIP</h4>
+                        <p class="modal-card-tagline">Vous n'avez plus rien à gérer</p>
+                        <span class="modal-card-price">149€<small>/mois</small></span>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Hébergement & infra</span>
+                        <ul>
+                            <li class="included">Hébergement sécurisé (SSL)</li>
+                            <li class="included">Nom de domaine inclus</li>
+                            <li class="included">Sauvegardes automatiques</li>
+                            <li class="included">Surveillance 24/7</li>
+                            <li class="included">Mises à jour de sécurité</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Modifications</span>
+                        <ul>
+                            <li class="included"><strong>Modifications illimitées</strong></li>
+                            <li class="included">Textes, photos, visuels</li>
+                            <li class="included">Ajustements de mise en page</li>
+                            <li class="included">Ajout de nouvelles sections</li>
+                            <li class="included">Refonte visuelle de sections</li>
+                            <li class="included">Ajout de modules ou fonctionnalités</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-section">
+                        <span class="modal-card-label">Support</span>
+                        <ul>
+                            <li class="included"><strong>Support prioritaire 24h</strong></li>
+                            <li class="included">Conseil & accompagnement</li>
+                            <li class="included">Rapport mensuel</li>
+                            <li class="included">Conformité RGPD à jour</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card-footer">Engagement 12 mois</div>
+                </div>
+            </div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="contact.html" class="btn-primary" style="font-size: 0.875rem;">
+                    Choisir un abonnement
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
         </div>
     </div>
 

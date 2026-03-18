@@ -4546,6 +4546,7 @@ section {
    MODALE DETAIL ABONNEMENTS — Cartes
    =================================== */
 
+/* ── Modale détail abonnements ── */
 #modalDetailAbonnements {
     position: fixed;
     top: 0;
@@ -4557,7 +4558,7 @@ section {
     align-items: center;
     justify-content: center;
     z-index: 10001;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 #modalDetailAbonnements.active {
@@ -4566,36 +4567,45 @@ section {
 
 .modal-detail-inner {
     background: var(--white);
-    border-radius: 8px;
-    max-width: 960px;
+    border-radius: 16px;
+    max-width: 1020px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
-    padding: 2.5rem;
+    overflow-x: hidden;
+    padding: 2.5rem 2.5rem 2rem;
     position: relative;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-close-btn {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: none;
-    border: none;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 50%;
     cursor: pointer;
     padding: 0.5rem;
     color: var(--gray-500);
-    transition: color var(--transition);
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-close-btn:hover {
     color: var(--black);
+    background: var(--gray-100);
 }
 
 .modal-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .modal-subtitle {
@@ -4608,13 +4618,15 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+    align-items: start;
 }
 
 .modal-card {
     border: 1px solid var(--gray-200);
-    border-radius: var(--radius-md);
+    border-radius: 12px;
     padding: 1.5rem 1.25rem;
     position: relative;
+    background: var(--white);
 }
 
 .modal-card--featured {
@@ -4623,16 +4635,17 @@ section {
 
 .modal-card-badge {
     position: absolute;
-    top: -10px;
+    top: -11px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--black);
     color: var(--white);
-    padding: 0.15rem 0.75rem;
+    padding: 0.2rem 0.85rem;
     border-radius: 20px;
     font-size: 0.7rem;
     font-weight: 600;
     white-space: nowrap;
+    letter-spacing: 0.01em;
 }
 
 .modal-card-header {
@@ -4661,6 +4674,7 @@ section {
     font-weight: 800;
     color: var(--black);
     letter-spacing: -0.02em;
+    display: inline-block;
 }
 
 .modal-card-price small {
@@ -4691,11 +4705,11 @@ section {
 
 .modal-card-section li {
     font-size: 0.8rem;
-    padding: 0.3rem 0;
-    padding-left: 1.25rem;
+    padding: 0.35rem 0;
+    padding-left: 1.35rem;
     position: relative;
     color: var(--gray-600);
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .modal-card-section li::before {
@@ -4738,6 +4752,147 @@ section {
     text-align: center;
 }
 
+/* ── Tablette (768px - 1024px) ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #modalDetailAbonnements {
+        padding: 1rem;
+    }
+
+    .modal-detail-inner {
+        padding: 2rem 1.5rem;
+        max-height: 90vh;
+        max-width: 600px;
+    }
+
+    .modal-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .modal-card {
+        padding: 1.25rem;
+    }
+}
+
+/* ── Grand mobile (481px - 767px) ── */
+@media (min-width: 481px) and (max-width: 767px) {
+    #modalDetailAbonnements {
+        padding: 0.75rem;
+        align-items: flex-start;
+        padding-top: 1.5rem;
+    }
+
+    .modal-detail-inner {
+        padding: 1.75rem 1.25rem 1.5rem;
+        max-height: 88vh;
+    }
+
+    .modal-title {
+        font-size: 1.15rem;
+        padding-right: 2.5rem;
+    }
+
+    .modal-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .modal-card-price {
+        font-size: 1.5rem;
+    }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+    #modalDetailAbonnements {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .modal-detail-inner {
+        padding: 1.5rem 1rem 1.25rem;
+        max-height: 92vh;
+        border-radius: 16px 16px 0 0;
+        max-width: 100%;
+    }
+
+    .modal-close-btn {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal-close-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .modal-title {
+        font-size: 1.05rem;
+        padding-right: 2.5rem;
+        line-height: 1.3;
+    }
+
+    .modal-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .modal-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .modal-card {
+        padding: 1.15rem 1rem;
+        border-radius: 10px;
+    }
+
+    .modal-card-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .modal-card-header h4 {
+        font-size: 1rem;
+    }
+
+    .modal-card-tagline {
+        font-size: 0.75rem;
+    }
+
+    .modal-card-price {
+        font-size: 1.4rem;
+    }
+
+    .modal-card-price small {
+        font-size: 0.8rem;
+    }
+
+    .modal-card-section li {
+        font-size: 0.78rem;
+        padding: 0.25rem 0;
+        padding-left: 1.2rem;
+    }
+
+    .modal-card-label {
+        font-size: 0.65rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .modal-card-footer {
+        font-size: 0.7rem;
+        margin-top: 0.75rem;
+        padding-top: 0.6rem;
+    }
+
+    .modal-card-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.7rem;
+    }
+}
+
 /* ===================================
    MOBILE OPTIMISATION COMPLETE
    =================================== */
@@ -4778,36 +4933,6 @@ section {
     .recommended-badge {
         font-size: 0.7rem;
         padding: 0.2rem 0.75rem;
-    }
-
-    /* Modale cartes abonnements mobile */
-    #modalDetailAbonnements {
-        padding: 0.5rem;
-        align-items: flex-start;
-        padding-top: 2rem;
-    }
-
-    .modal-detail-inner {
-        padding: 1.5rem 1rem;
-        max-height: 85vh;
-    }
-
-    .modal-title {
-        font-size: 1.1rem;
-        padding-right: 2rem;
-    }
-
-    .modal-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .modal-card {
-        padding: 1.25rem 1rem;
-    }
-
-    .modal-card-price {
-        font-size: 1.5rem;
     }
 
     /* Refonte grid 6 cartes — 2 colonnes sur mobile */
