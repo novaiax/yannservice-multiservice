@@ -915,6 +915,11 @@ button {
     text-align: left;
 }
 
+.offer-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+}
+
 .offer-card {
     padding: var(--space-2xl);
     background: var(--white);
@@ -922,6 +927,12 @@ button {
     border-radius: var(--radius-md);
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .offer-card-primary {
@@ -2620,4 +2631,104 @@ button {
     color: var(--gray-500);
     font-size: 0.9375rem;
     margin-bottom: var(--space-lg);
+}
+
+/* ===================================
+   OFFER CARD SECONDARY
+   =================================== */
+
+.offer-card-secondary {
+    border-color: var(--gray-300);
+    border-width: 2px;
+    background: var(--gray-50);
+}
+
+.offer-details-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-bottom: var(--space-md);
+    transition: color 0.2s ease;
+}
+
+.offer-details-link:hover {
+    color: var(--gray-600);
+}
+
+/* ===================================
+   REMISE EN FORME SECTION
+   =================================== */
+
+.section-remise {
+    padding: var(--space-5xl) 0;
+    background: var(--gray-50);
+}
+
+.remise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.remise-block {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.remise-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.remise-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--black);
+}
+
+.remise-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.remise-block li {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.remise-block li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--success, #22c55e);
+    font-weight: 700;
+    font-size: 0.8125rem;
+}
+
+@media (max-width: 768px) {
+    .offer-grid--two {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .remise-grid {
+        grid-template-columns: 1fr;
+    }
 }
