@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yannservice.com/abonnement/sitemap.xml
+Sitemap: https://yannservice.fr/abonnement/sitemap.xml

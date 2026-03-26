@@ -2,7 +2,7 @@
    YANNSERVICE — Abonnement Site Pro
    Style: Premium strict (angulaire)
    Palette: 90% neutral + 10% accent
-   Basé sur yannservice.com v7.1
+   Basé sur yannservice.fr v7.1
    =================================== */
 
 *, *::before, *::after {
@@ -2587,8 +2587,22 @@ ul { list-style: none; }
     gap: 0.625rem;
 }
 
+.merci-actions-grid.merci-actions-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.merci-actions-grid.merci-actions-grid-1col {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
-    .merci-actions-grid { grid-template-columns: 1fr; }
+    .merci-actions-grid,
+    .merci-actions-grid.merci-actions-grid-2col,
+    .merci-actions-grid.merci-actions-grid-1col { grid-template-columns: 1fr; }
 }
 
 /* ===================================
