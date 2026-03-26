@@ -727,26 +727,15 @@
                 total: document.getElementById('payAmount').textContent
             };
 
-            // Envoi via Formspree
+            // Ouvrir Stripe immédiatement (évite le blocage popup)
+            window.location.href = STRIPE_LINK;
+
+            // Envoyer les données à Formspree en parallèle (fire & forget)
             fetch('https://formspree.io/f/' + FORMSPREE_ID, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(formData)
-            })
-            .then(response => {
-                // Rediriger vers Stripe dans tous les cas
-                window.open(STRIPE_LINK, '_blank');
-                btn.innerHTML = originalText;
-                btn.style.pointerEvents = '';
-                btn.style.opacity = '';
-            })
-            .catch(() => {
-                // Même en cas d'erreur, on redirige vers Stripe
-                window.open(STRIPE_LINK, '_blank');
-                btn.innerHTML = originalText;
-                btn.style.pointerEvents = '';
-                btn.style.opacity = '';
-            });
+            }).catch(() => {});
         });
 
         // ---- Remove error on focus ----
