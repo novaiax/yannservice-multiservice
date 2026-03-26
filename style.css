@@ -2744,6 +2744,283 @@ ul { list-style: none; }
    PRINT
    =================================== */
 
+/* Mobile-only / Desktop-only helpers */
+.mobile-only { display: none; }
+.desktop-only { display: inline; }
+
+@media (max-width: 768px) {
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+}
+
+/* ===================================
+   COMPARATIF TABLE
+   =================================== */
+
+.comparatif-table {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    margin-bottom: 2rem;
+}
+
+.comparatif-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    background: #fafafa;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.comparatif-col-label {
+    padding: 1.5rem;
+}
+
+.comparatif-col-bad,
+.comparatif-col-good {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.comparatif-col-bad {
+    background: #fef2f2;
+    border-left: 1px solid #e5e5e5;
+}
+
+.comparatif-col-good {
+    background: #f0fdf4;
+    border-left: 1px solid #e5e5e5;
+}
+
+.comparatif-icon-bad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.comparatif-icon-good {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.comparatif-title-bad,
+.comparatif-title-good {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.comparatif-title-bad {
+    color: #991b1b;
+}
+
+.comparatif-title-good {
+    color: #166534;
+}
+
+.comparatif-price-bad {
+    font-size: 0.85rem;
+    color: #b91c1c;
+    font-weight: 600;
+}
+
+.comparatif-price-bad small {
+    font-weight: 400;
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.comparatif-price-good {
+    font-size: 1.1rem;
+    color: #16a34a;
+    font-weight: 800;
+}
+
+.comparatif-price-good small {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.comparatif-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s ease;
+}
+
+.comparatif-row:last-child {
+    border-bottom: none;
+}
+
+.comparatif-row:hover {
+    background: #fafafa;
+}
+
+.comparatif-feature {
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+}
+
+.comparatif-bad {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #991b1b;
+    background: #fef2f2;
+    border-left: 1px solid #fde8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparatif-bad small {
+    color: #b91c1c;
+    opacity: 0.7;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+}
+
+.comparatif-good {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #166534;
+    background: #f0fdf4;
+    border-left: 1px solid #dcfce7;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparatif-good small {
+    font-weight: 400;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 0.15rem;
+}
+
+.comparatif-row-total {
+    background: #fafafa;
+    border-top: 2px solid #e5e5e5;
+}
+
+.comparatif-row-total .comparatif-feature {
+    font-size: 0.95rem;
+}
+
+.comparatif-row-total .comparatif-bad {
+    background: #fee2e2;
+    font-size: 1rem;
+}
+
+.comparatif-row-total .comparatif-good {
+    background: #dcfce7;
+    font-size: 1rem;
+}
+
+.comparatif-bottom {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.comparatif-verdict {
+    font-size: 1.05rem;
+    color: #333;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .comparatif-header {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 0.75rem;
+        border: 1px solid #e5e5e5;
+    }
+
+    .comparatif-col-label {
+        display: none;
+    }
+
+    .comparatif-row {
+        grid-template-columns: 1fr;
+        border-bottom: none;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #e5e5e5;
+    }
+
+    .comparatif-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .comparatif-row .comparatif-feature {
+        grid-column: 1 / -1;
+        background: #fafafa;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .comparatif-bad,
+    .comparatif-good {
+        border-left: none;
+    }
+
+    .comparatif-table {
+        border: none;
+        background: transparent;
+    }
+
+    .comparatif-row-total {
+        border-top: none;
+        margin-top: 0.5rem;
+    }
+
+    .comparatif-price-good {
+        font-size: 0.95rem;
+    }
+
+    .comparatif-verdict {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+}
+
+/* ===================================
+   PRINT
+   =================================== */
+
 @media print {
     .nav, .whatsapp-float, .mobile-cta-bar, .mobile-menu-toggle { display: none !important; }
     .hero { padding-top: 2rem; }
