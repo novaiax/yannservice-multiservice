@@ -692,15 +692,8 @@
             return div.innerHTML;
         }
 
-        // ---- Envoi email + redirection Stripe ----
-        document.getElementById('payBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            const btn = this;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Envoi en cours...';
-            btn.style.pointerEvents = 'none';
-            btn.style.opacity = '0.7';
-
+        // ---- Envoi email au clic sur payer (le lien <a> gère la redirection Stripe) ----
+        document.getElementById('payBtn').addEventListener('click', function() {
             // Collecter les options sélectionnées
             const optionsSelected = [];
             document.querySelectorAll('input[name="options"]:checked').forEach(cb => {
@@ -731,10 +724,7 @@
             const blob = new Blob([JSON.stringify(formData)], { type: 'application/json' });
             navigator.sendBeacon('https://formspree.io/f/' + FORMSPREE_ID, blob);
 
-            // Rediriger vers Stripe après 500ms (laisse le temps au beacon)
-            setTimeout(function() {
-                window.location.href = STRIPE_LINK;
-            }, 500);
+            // Le lien <a href="...stripe..." target="_blank"> s'ouvre normalement
         });
 
         // ---- Remove error on focus ----
