@@ -1546,10 +1546,10 @@ ul { list-style: none; }
     transition: all var(--transition);
 }
 
-.mobile-cta-whatsapp {
-    background: var(--whatsapp);
+.mobile-cta-subscribe {
+    background: var(--primary);
     color: var(--white);
-    border-color: var(--whatsapp);
+    border-color: var(--primary);
 }
 
 @media (max-width: 768px) {
