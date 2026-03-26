@@ -751,9 +751,13 @@
                 total: document.getElementById('payAmount').textContent
             };
 
-            // Envoyer les données à Formspree via sendBeacon
-            const blob = new Blob([JSON.stringify(formData)], { type: 'application/json' });
-            navigator.sendBeacon('https://formspree.io/f/' + FORMSPREE_ID, blob);
+            // Envoyer les données à Formspree via fetch keepalive
+            fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(formData),
+                keepalive: true
+            }).catch(() => {});
 
             // Après 1.5s : changer le texte
             setTimeout(function() {
