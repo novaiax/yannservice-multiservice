@@ -434,10 +434,10 @@
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 Modifier
                             </button>
-                            <a href="https://buy.stripe.com/aFaeVd8U4dQtbOC45wdby00" class="btn-primary btn-large btn-pay" id="payBtn" target="_blank" rel="noopener">
+                            <button type="button" class="btn-primary btn-large btn-pay" id="payBtn">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                                 Souscrire et payer <span id="payAmount">29,99€/mois</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -494,6 +494,32 @@
             </div>
         </div>
     </footer>
+
+    <!-- Overlay Paiement Sécurisé -->
+    <div id="paymentOverlay" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); justify-content:center; align-items:center; flex-direction:column; gap:2rem;">
+        <div style="background:#fff; border-radius:1.5rem; padding:3rem 2.5rem; max-width:480px; width:90%; text-align:center; box-shadow:0 25px 60px rgba(0,0,0,0.3); animation:overlaySlideIn 0.4s ease;">
+            <div id="overlaySpinner" style="width:64px; height:64px; border:4px solid #e5e7eb; border-top-color:#2563eb; border-radius:50%; margin:0 auto 1.5rem; animation:spin 1s linear infinite;"></div>
+            <div id="overlayLock" style="display:none; margin:0 auto 1.5rem;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h2 id="overlayTitle" style="font-size:1.5rem; font-weight:700; color:#111; margin-bottom:0.75rem;">Préparation du paiement sécurisé</h2>
+            <p id="overlayText" style="color:#6b7280; font-size:1rem; line-height:1.6; margin-bottom:1.5rem;">Vos informations ont été enregistrées.<br>Vous allez être redirigé vers notre plateforme de paiement sécurisée.</p>
+            <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; padding:0.75rem 1.25rem; background:#f0fdf4; border-radius:0.75rem; margin-bottom:1rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span style="color:#16a34a; font-weight:600; font-size:0.875rem;">Paiement 100% sécurisé par Stripe</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; gap:1.5rem; opacity:0.5; margin-top:0.5rem;">
+                <span style="font-size:0.75rem; color:#9ca3af;">Visa</span>
+                <span style="font-size:0.75rem; color:#9ca3af;">Mastercard</span>
+                <span style="font-size:0.75rem; color:#9ca3af;">SEPA</span>
+                <span style="font-size:0.75rem; color:#9ca3af;">Apple Pay</span>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes overlaySlideIn { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes spin { to { transform:rotate(360deg); } }
+    </style>
 
     <script src="script.js"></script>
     <script>
@@ -692,8 +718,13 @@
             return div.innerHTML;
         }
 
-        // ---- Envoi email au clic sur payer (le lien <a> gère la redirection Stripe) ----
+        // ---- Overlay + Envoi email + Redirection Stripe ----
         document.getElementById('payBtn').addEventListener('click', function() {
+            // Afficher l'overlay
+            const overlay = document.getElementById('paymentOverlay');
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
             // Collecter les options sélectionnées
             const optionsSelected = [];
             document.querySelectorAll('input[name="options"]:checked').forEach(cb => {
@@ -720,11 +751,22 @@
                 total: document.getElementById('payAmount').textContent
             };
 
-            // Envoyer les données à Formspree via sendBeacon (survit à la navigation)
+            // Envoyer les données à Formspree via sendBeacon
             const blob = new Blob([JSON.stringify(formData)], { type: 'application/json' });
             navigator.sendBeacon('https://formspree.io/f/' + FORMSPREE_ID, blob);
 
-            // Le lien <a href="...stripe..." target="_blank"> s'ouvre normalement
+            // Après 1.5s : changer le texte
+            setTimeout(function() {
+                document.getElementById('overlaySpinner').style.display = 'none';
+                document.getElementById('overlayLock').style.display = 'block';
+                document.getElementById('overlayTitle').textContent = 'Redirection en cours...';
+                document.getElementById('overlayText').innerHTML = 'Vous allez être redirigé vers <strong>Stripe</strong> pour finaliser votre paiement en toute sécurité.';
+            }, 1500);
+
+            // Après 2.5s : redirection vers Stripe
+            setTimeout(function() {
+                window.location.href = STRIPE_LINK;
+            }, 2500);
         });
 
         // ---- Remove error on focus ----
