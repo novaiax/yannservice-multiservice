@@ -751,26 +751,33 @@
                 total: document.getElementById('payAmount').textContent
             };
 
-            // Envoyer les données à Formspree via fetch keepalive
-            fetch('https://formspree.io/f/' + FORMSPREE_ID, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(formData),
-                keepalive: true
-            }).catch(() => {});
-
-            // Après 1.5s : changer le texte
-            setTimeout(function() {
+            // Envoyer les données à Formspree, puis rediriger vers Stripe
+            function redirectToStripe() {
                 document.getElementById('overlaySpinner').style.display = 'none';
                 document.getElementById('overlayLock').style.display = 'block';
                 document.getElementById('overlayTitle').textContent = 'Redirection en cours...';
                 document.getElementById('overlayText').innerHTML = 'Vous allez être redirigé vers <strong>Stripe</strong> pour finaliser votre paiement en toute sécurité.';
-            }, 1500);
+                setTimeout(function() {
+                    window.location.href = STRIPE_LINK;
+                }, 1000);
+            }
 
-            // Après 2.5s : redirection vers Stripe
-            setTimeout(function() {
-                window.location.href = STRIPE_LINK;
-            }, 2500);
+            // Timeout de sécurité : rediriger après 5s max même si Formspree ne répond pas
+            var safetyTimeout = setTimeout(redirectToStripe, 5000);
+
+            fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(function(response) {
+                clearTimeout(safetyTimeout);
+                redirectToStripe();
+            })
+            .catch(function() {
+                clearTimeout(safetyTimeout);
+                redirectToStripe();
+            });
         });
 
         // ---- Remove error on focus ----
