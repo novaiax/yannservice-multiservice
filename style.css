@@ -1396,9 +1396,11 @@ ul { list-style: none; }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
+    justify-items: center;
 }
 
 .footer-brand > p {
@@ -1413,6 +1415,7 @@ ul { list-style: none; }
     flex-direction: column;
     gap: 4px;
     margin-top: 1.25rem;
+    align-items: center;
 }
 
 .footer-contact-info a,
@@ -1438,6 +1441,7 @@ ul { list-style: none; }
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
+    align-items: center;
 }
 
 .footer-col a {
