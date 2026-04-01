@@ -488,21 +488,23 @@
             card.dataset.sector = d.filter;
             card.onclick = function() { openFs(d.src, d.title); };
 
+            // Sites with animations that should keep iframes on mobile
+            var keepIframe = ['metz-motors', 'basicdept', 'salamone-construction'];
+            var folderName = getScreenshotName(d.src);
+            var useIframe = !isMobile || keepIframe.indexOf(folderName) !== -1;
+
             var thumbContent;
-            if (isMobile) {
-                // Mobile: static screenshot image (no iframe = no crash)
-                var screenshotName = getScreenshotName(d.src);
-                thumbContent =
-                    '<div class="demo-thumb">' +
-                        '<img src="demo/screenshots/' + screenshotName + '.jpg" alt="' + d.title + '" loading="lazy" class="demo-thumb-img">' +
-                    '</div>';
-            } else {
-                // Desktop: iframe with lazy loading
+            if (useIframe) {
                 thumbContent =
                     '<div class="demo-thumb">' +
                         '<div class="demo-thumb-inner">' +
                             '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts" title="' + d.title + '"></iframe>' +
                         '</div>' +
+                    '</div>';
+            } else {
+                thumbContent =
+                    '<div class="demo-thumb">' +
+                        '<img src="demo/screenshots/' + folderName + '.jpg" alt="' + d.title + '" loading="lazy" class="demo-thumb-img">' +
                     '</div>';
             }
 
@@ -517,23 +519,21 @@
             grid.appendChild(card);
         });
 
-        // Desktop only: lazy load iframes when visible
-        if (!isMobile) {
-            window.iframeObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    var iframe = entry.target;
-                    if (entry.isIntersecting) {
-                        if (!iframe.src && iframe.dataset.src) {
-                            iframe.src = iframe.dataset.src;
-                        }
-                        window.iframeObserver.unobserve(iframe);
+        // Lazy load iframes when visible (desktop: all, mobile: only animated sites)
+        window.iframeObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var iframe = entry.target;
+                if (entry.isIntersecting) {
+                    if (!iframe.src && iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
                     }
-                });
-            }, { rootMargin: '200px' });
-            document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
-                window.iframeObserver.observe(iframe);
+                    window.iframeObserver.unobserve(iframe);
+                }
             });
-        }
+        }, { rootMargin: '200px' });
+        document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
+            window.iframeObserver.observe(iframe);
+        });
 
         // Filters
         document.querySelectorAll('.filter-btn').forEach(function(btn) {
