@@ -15,9 +15,9 @@
     <meta name="description" content="Exemples de sites web professionnels pour artisans et PME. Designs sur mesure ou personnalisables, adaptables à tous les secteurs : BTP, automobile, beauté, énergie et plus.">
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://yannservice.fr/abonnement/realisations">
+    <link rel="canonical" href="https://yannservice.fr/abonnement/demos">
 
-    <title>Nos Réalisations - Sites Web Professionnels Artisans Exemples de Sites Web - Designs Professionnels Artisans & PME PME | YannService</title>
+    <title>Exemples de Sites Web - Designs Professionnels Artisans & PME | YannService</title>
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
@@ -253,20 +253,20 @@
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
             .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
-            /* Mobile: full interactive iframe, no overlay, scrollable */
             .demo-card { cursor: default; }
-            .demo-thumb { height: 70vh; overflow: hidden; }
+            .demo-thumb { height: 55vh; overflow: scroll; -webkit-overflow-scrolling: touch; }
             .demo-thumb::after { display: none; }
             .demo-thumb-inner {
-                width: 100%;
-                height: 100%;
-                transform: none;
+                width: 1440px;
+                height: 5000px;
+                transform-origin: top left;
+                transform: scale(0.25);
                 pointer-events: auto;
             }
             .demo-thumb-inner iframe {
+                width: 1440px;
+                height: 20000px;
                 pointer-events: auto;
-                width: 100%;
-                height: 100%;
             }
             .demo-card-footer { padding: 0.75rem 1rem; }
             .demo-card-title { font-size: 0.875rem; }
@@ -279,7 +279,7 @@
         }
 
         @media (max-width: 480px) {
-            .demo-thumb { height: 200px; }
+            .demo-thumb { height: 50vh; }
             .demo-thumb-inner {
                 transform: scale(0.22);
             }
@@ -308,7 +308,7 @@
                     <a href="index.html#inclus" class="nav-link">Inclus</a>
                     <a href="index.html#seo" class="nav-link">SEO</a>
                     <a href="index.html#options" class="nav-link">Options</a>
-                    <a href="realisations.html" class="nav-link" style="font-weight:700;color:var(--black);">Demos</a>
+                    <a href="demos.html" class="nav-link" style="font-weight:700;color:var(--black);">Demos</a>
                     <a href="index.html#faq" class="nav-link">FAQ</a>
                     <a href="souscrire.html" class="nav-link" style="font-weight: 700; color: var(--black);">Souscrire</a>
                     <div class="nav-cta">
@@ -343,7 +343,7 @@
                 </div>
                 <div class="demos-hero-note demos-hero-note-mobile">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                    Scrollez dans chaque site pour le decouvrir
+                    Appuyez sur un design pour l'ouvrir
                 </div>
             </div>
         </section>
@@ -392,7 +392,7 @@
                     <div class="footer-contact-info">
                         <a href="mailto:yannwzservice@gmail.com">yannwzservice@gmail.com</a>
                         <a href="tel:+33766880019">07 66 88 00 19</a>
-                        <span>Strasbourg</span>
+                        <span>34 rue Oberlin, 67113 Blaesheim</span>
                         <span>SIRET : 102 246 717 00015</span>
                     </div>
                 </div>
@@ -402,7 +402,7 @@
                         <li><a href="index.html#offre">Offre</a></li>
                         <li><a href="index.html#inclus">Ce qui est inclus</a></li>
                         <li><a href="index.html#options">Options</a></li>
-                        <li><a href="realisations.html">Exemples de sites</a></li>
+                        <li><a href="demos.html">Exemples de sites</a></li>
                         <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
@@ -467,7 +467,6 @@
             { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
             { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
             { src: 'demo/artducarreau/', title: "L'Art Du Carreau", sector: 'Carreleur premium - Mulhouse', badge: 'Carrelage', filter: 'btp' },
-            { src: 'demo/salon-premium/', title: 'Salon Éclat Paris', sector: 'Coiffure premium & balayage', badge: 'Beauté', filter: 'beaute' },
             { src: 'demo/carreau-design-wittenheim/', title: 'Carreaux Design', sector: 'Carreleur premium - Wittenheim', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/laurent-toiture/', title: 'Laurent Toiture', sector: 'Couvreur-zingueur - Strasbourg', badge: 'Toiture', filter: 'btp' },
             { src: 'demo/carreaux-design-ploufragan/', title: 'Carreaux&Design', sector: 'Carreleur - Ploufragan', badge: 'Carrelage', filter: 'btp' },
@@ -475,7 +474,6 @@
             { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' },
             { src: 'demo/lorraine-peinture/', title: 'Lorraine Peinture 57', sector: 'Peintre en batiment - Metz', badge: 'Peinture', filter: 'btp' },
             { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' },
-            { src: 'demo/salon-luxe/', title: 'LA SUITE Holtzheim', sector: 'Coiffure & couleur sur-mesure', badge: 'Beauté', filter: 'beaute' },
             { src: 'demo/lion-color/', title: 'Lion Color', sector: 'Peintre professionnel - Strasbourg', badge: 'Peinture', filter: 'btp' },
             { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Toiture, isolation & energie - Lyon', badge: 'Energie', filter: 'energie' }
@@ -499,12 +497,23 @@
                 card.onclick = function() { openFs(d.src, d.title); };
             }
 
-            card.innerHTML =
-                '<div class="demo-thumb">' +
+            var folderName = getScreenshotName(d.src);
+            var isBasicdept = (folderName === 'basicdept');
+            var thumbHtml;
+
+            if (isMobile && isBasicdept) {
+                thumbHtml = '<div class="demo-thumb">' +
+                    '<video src="demo/screenshots/basicdept-preview.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover"></video>' +
+                '</div>';
+            } else {
+                thumbHtml = '<div class="demo-thumb">' +
                     '<div class="demo-thumb-inner">' +
                         '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts allow-popups" title="' + d.title + '"></iframe>' +
                     '</div>' +
-                '</div>' +
+                '</div>';
+            }
+
+            card.innerHTML = thumbHtml +
                 '<div class="demo-card-footer">' +
                     '<div class="demo-card-info">' +
                         '<span class="demo-card-title">' + d.title + '</span>' +
@@ -515,39 +524,32 @@
             grid.appendChild(card);
         });
 
-        // Smart iframe manager: load visible, unload hidden, max 3 on mobile
-        var MAX_LOADED = isMobile ? 3 : 50;
-        window.loadedIframes = [];
+        // Lazy load: desktop loads all visible, mobile max 2 at a time
+        var MAX_LOADED = isMobile ? 2 : 50;
+        var loadedList = [];
 
         window.iframeObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 var iframe = entry.target;
                 if (entry.isIntersecting) {
-                    // Load this iframe
                     if (!iframe.src && iframe.dataset.src) {
                         iframe.src = iframe.dataset.src;
-                        window.loadedIframes.push(iframe);
-                        // If over limit, unload the oldest
-                        while (window.loadedIframes.length > MAX_LOADED) {
-                            var old = window.loadedIframes.shift();
-                            if (old && old.src) {
-                                old.dataset.src = old.src;
-                                old.removeAttribute('src');
-                            }
+                        loadedList.push(iframe);
+                        while (loadedList.length > MAX_LOADED) {
+                            var old = loadedList.shift();
+                            if (old && old.src) { old.dataset.src = old.src; old.removeAttribute('src'); }
                         }
                     }
                 } else if (isMobile && iframe.src) {
-                    // Mobile: unload when out of view
                     iframe.dataset.src = iframe.src;
                     iframe.removeAttribute('src');
-                    window.loadedIframes = window.loadedIframes.filter(function(f) { return f !== iframe; });
+                    loadedList = loadedList.filter(function(f) { return f !== iframe; });
                 }
+                });
+            }, { rootMargin: isMobile ? '50px' : '200px' });
+            document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
+                window.iframeObserver.observe(iframe);
             });
-        }, { rootMargin: isMobile ? '50px' : '200px' });
-
-        document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
-            window.iframeObserver.observe(iframe);
-        });
 
         // Filters
         document.querySelectorAll('.filter-btn').forEach(function(btn) {
@@ -568,14 +570,13 @@
     })();
 
     function openFs(src, title) {
-        // Unload ALL thumbnails to free memory for fullscreen
+        // Desktop: unload thumbnail iframes to free memory
         document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
             if (iframe.src) {
                 iframe.dataset.src = iframe.src;
                 iframe.removeAttribute('src');
             }
         });
-        window.loadedIframes = [];
         document.getElementById('fsIframe').src = src;
         document.getElementById('fsTitle').textContent = title;
         document.getElementById('fullscreenOverlay').classList.add('active');
@@ -586,7 +587,7 @@
         document.getElementById('fullscreenOverlay').classList.remove('active');
         document.getElementById('fsIframe').src = '';
         document.body.style.overflow = '';
-        // Re-observe all to reload visible ones
+        // Desktop: re-observe thumbnails to lazy-reload visible ones
         document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
             if (window.iframeObserver) window.iframeObserver.observe(iframe);
         });
