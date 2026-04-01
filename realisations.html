@@ -569,13 +569,6 @@
     })();
 
     function openFs(src, title) {
-        // Desktop: unload thumbnail iframes to free memory
-        document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
-            if (iframe.src) {
-                iframe.dataset.src = iframe.src;
-                iframe.removeAttribute('src');
-            }
-        });
         document.getElementById('fsIframe').src = src;
         document.getElementById('fsTitle').textContent = title;
         document.getElementById('fullscreenOverlay').classList.add('active');
@@ -586,10 +579,6 @@
         document.getElementById('fullscreenOverlay').classList.remove('active');
         document.getElementById('fsIframe').src = '';
         document.body.style.overflow = '';
-        // Desktop: re-observe thumbnails to lazy-reload visible ones
-        document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
-            if (window.iframeObserver) window.iframeObserver.observe(iframe);
-        });
     }
     function setDevice(mode) {
         var wrap = document.getElementById('fsWrap');
