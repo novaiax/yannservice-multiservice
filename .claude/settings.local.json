@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx serve:*)",
+      "Bash(cp /tmp/claude_screenshot_*.jpg '/d/code/sites/pages web/sites prestations de service Yann/v2/demo/screenshots/metz-motors.jpg' 2)",
+      "Bash(/dev/null ls:*)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__new_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__resize_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "Bash(DEMO=\"D:/code/sites/pages web/sites prestations de service Yann/v2/demo\")",
+      "Bash(mkdir -p \"$DEMO/basicdept\")",
+      "Bash(cp -r \"D:/code/sites/pages web/site demos/recuperation de site exemple/www.basicagency.com/basicdept/\"* \"$DEMO/basicdept/\")",
+      "Read(//d/code/sites/pages web/site demos/recuperation de site exemple/prestige-paysages/**)",
+      "Bash(fuser \"D:/code/sites/pages web/sites prestations de service Yann/v2/.git/index.lock\")",
+      "Bash(tasklist)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(done)",
+      "Bash(grep -v -E '^\\(index\\\\.html|styles\\\\.css|script\\\\.js\\)$')",
+      "Bash(xargs rm:*)",
+      "Bash(rm -rf \"$DEMO/novalyse\")",
+      "Bash(mkdir -p \"$DEMO/novalyse\")",
+      "Bash(cp -r \"D:/code/sites/pages web/site demos/novalyse/\"* \"$DEMO/novalyse/\")"
+    ]
+  }
+}
