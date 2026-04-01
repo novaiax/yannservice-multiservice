@@ -178,14 +178,18 @@ ul{list-style:none}
 @media(max-width:768px){
     .container{padding:0 20px}
     .header .container{height:64px}
-    .nav,.header-cta{display:none}
+    .header-cta{display:none}
     .mobile-toggle{display:flex}
-    .nav-menu{flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--white);box-shadow:var(--shadow-lg);padding:16px 0;display:none;z-index:99}
-    .nav-menu.active{display:flex}
-    .nav-menu a{padding:14px 24px;font-size:15px}
+    .nav{position:static}
+    .nav-menu{flex-direction:column;position:fixed;top:80px;left:0;right:0;background:var(--white);box-shadow:var(--shadow-lg);padding:16px 0;max-height:0;overflow:hidden;transition:max-height .3s ease;z-index:99;gap:0}
+    .nav-menu.active{max-height:400px}
+    .nav-menu a{padding:14px 24px;font-size:15px;display:block;border-bottom:1px solid var(--gray);border-radius:0}
+    .nav-menu a:hover{background:rgba(139,9,54,.04)}
     .hero{min-height:70vh}
-    .hero h1{font-size:32px}
-    .hero-desc{font-size:15px}
+    .header .container{height:66px}
+    .hero{min-height:60vh}
+    .hero h1{font-size:30px}
+    .hero-desc{font-size:14px}
     .hero-btns{flex-direction:column}
     .hero-btns .btn{width:100%;justify-content:center}
     .adv-grid{flex-direction:column;gap:24px;align-items:center}
