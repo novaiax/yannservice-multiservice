@@ -253,11 +253,20 @@
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
             .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .demo-thumb { height: 240px; }
+            /* Mobile: full interactive iframe, no overlay, scrollable */
+            .demo-card { cursor: default; }
+            .demo-thumb { height: 70vh; overflow: hidden; }
+            .demo-thumb::after { display: none; }
             .demo-thumb-inner {
-                width: 1440px;
-                height: 900px;
-                transform: scale(0.26);
+                width: 100%;
+                height: 100%;
+                transform: none;
+                pointer-events: auto;
+            }
+            .demo-thumb-inner iframe {
+                pointer-events: auto;
+                width: 100%;
+                height: 100%;
             }
             .demo-card-footer { padding: 0.75rem 1rem; }
             .demo-card-title { font-size: 0.875rem; }
@@ -334,7 +343,7 @@
                 </div>
                 <div class="demos-hero-note demos-hero-note-mobile">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                    Appuyez sur un design pour l'ouvrir
+                    Scrollez dans chaque site pour le decouvrir
                 </div>
             </div>
         </section>
@@ -486,12 +495,14 @@
             var card = document.createElement('div');
             card.className = 'demo-card';
             card.dataset.sector = d.filter;
-            card.onclick = function() { openFs(d.src, d.title); };
+            if (!isMobile) {
+                card.onclick = function() { openFs(d.src, d.title); };
+            }
 
             card.innerHTML =
                 '<div class="demo-thumb">' +
                     '<div class="demo-thumb-inner">' +
-                        '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts" title="' + d.title + '"></iframe>' +
+                        '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts allow-popups" title="' + d.title + '"></iframe>' +
                     '</div>' +
                 '</div>' +
                 '<div class="demo-card-footer">' +
