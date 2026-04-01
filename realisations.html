@@ -499,25 +499,12 @@
                 card.onclick = function() { openFs(d.src, d.title); };
             }
 
-            var folderName = getScreenshotName(d.src);
-            var thumbContent;
-
-            if (isMobile && folderName === 'basicdept') {
-                // BASIC/DEPT: video 3s sur mobile (trop lourd en iframe)
-                thumbContent =
-                    '<div class="demo-thumb">' +
-                        '<video src="demo/screenshots/basicdept-preview.mp4" autoplay muted loop playsinline class="demo-thumb-video"></video>' +
-                    '</div>';
-            } else {
-                thumbContent =
-                    '<div class="demo-thumb">' +
-                        '<div class="demo-thumb-inner">' +
-                            '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts allow-popups" title="' + d.title + '"></iframe>' +
-                        '</div>' +
-                    '</div>';
-            }
-
-            card.innerHTML = thumbContent +
+            card.innerHTML =
+                '<div class="demo-thumb">' +
+                    '<div class="demo-thumb-inner">' +
+                        '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts allow-popups" title="' + d.title + '"></iframe>' +
+                    '</div>' +
+                '</div>' +
                 '<div class="demo-card-footer">' +
                     '<div class="demo-card-info">' +
                         '<span class="demo-card-title">' + d.title + '</span>' +
