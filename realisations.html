@@ -488,26 +488,12 @@
             card.dataset.sector = d.filter;
             card.onclick = function() { openFs(d.src, d.title); };
 
-            var folderName = getScreenshotName(d.src);
-
-            var thumbContent;
-            if (isMobile) {
-                // Mobile: 2s video preview for all sites (no iframes = no crash)
-                thumbContent =
-                    '<div class="demo-thumb">' +
-                        '<video src="demo/screenshots/' + folderName + '-preview.mp4" autoplay muted loop playsinline preload="none" class="demo-thumb-img"></video>' +
-                    '</div>';
-            } else {
-                // Desktop: iframe with lazy loading
-                thumbContent =
-                    '<div class="demo-thumb">' +
-                        '<div class="demo-thumb-inner">' +
-                            '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts" title="' + d.title + '"></iframe>' +
-                        '</div>' +
-                    '</div>';
-            }
-
-            card.innerHTML = thumbContent +
+            card.innerHTML =
+                '<div class="demo-thumb">' +
+                    '<div class="demo-thumb-inner">' +
+                        '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts" title="' + d.title + '"></iframe>' +
+                    '</div>' +
+                '</div>' +
                 '<div class="demo-card-footer">' +
                     '<div class="demo-card-info">' +
                         '<span class="demo-card-title">' + d.title + '</span>' +
@@ -518,18 +504,36 @@
             grid.appendChild(card);
         });
 
-        // Lazy load iframes when visible (desktop: all, mobile: only animated sites)
+        // Smart iframe manager: load visible, unload hidden, max 3 on mobile
+        var MAX_LOADED = isMobile ? 3 : 50;
+        window.loadedIframes = [];
+
         window.iframeObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 var iframe = entry.target;
                 if (entry.isIntersecting) {
+                    // Load this iframe
                     if (!iframe.src && iframe.dataset.src) {
                         iframe.src = iframe.dataset.src;
+                        window.loadedIframes.push(iframe);
+                        // If over limit, unload the oldest
+                        while (window.loadedIframes.length > MAX_LOADED) {
+                            var old = window.loadedIframes.shift();
+                            if (old && old.src) {
+                                old.dataset.src = old.src;
+                                old.removeAttribute('src');
+                            }
+                        }
                     }
-                    window.iframeObserver.unobserve(iframe);
+                } else if (isMobile && iframe.src) {
+                    // Mobile: unload when out of view
+                    iframe.dataset.src = iframe.src;
+                    iframe.removeAttribute('src');
+                    window.loadedIframes = window.loadedIframes.filter(function(f) { return f !== iframe; });
                 }
             });
-        }, { rootMargin: '200px' });
+        }, { rootMargin: isMobile ? '50px' : '200px' });
+
         document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
             window.iframeObserver.observe(iframe);
         });
@@ -553,13 +557,14 @@
     })();
 
     function openFs(src, title) {
-        // Desktop: unload thumbnail iframes to free memory
+        // Unload ALL thumbnails to free memory for fullscreen
         document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
             if (iframe.src) {
                 iframe.dataset.src = iframe.src;
                 iframe.removeAttribute('src');
             }
         });
+        window.loadedIframes = [];
         document.getElementById('fsIframe').src = src;
         document.getElementById('fsTitle').textContent = title;
         document.getElementById('fullscreenOverlay').classList.add('active');
@@ -570,7 +575,7 @@
         document.getElementById('fullscreenOverlay').classList.remove('active');
         document.getElementById('fsIframe').src = '';
         document.body.style.overflow = '';
-        // Desktop: re-observe thumbnails to lazy-reload visible ones
+        // Re-observe all to reload visible ones
         document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
             if (window.iframeObserver) window.iframeObserver.observe(iframe);
         });
