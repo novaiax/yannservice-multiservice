@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:annuaire-entreprises.data.gouv.fr)",
+      "Bash(grep -iE \"\\\\.\\(jpg|jpeg|png|webp|svg|gif|avif\\)$\")"
+    ]
+  }
+}

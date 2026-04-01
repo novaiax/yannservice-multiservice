@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/*.png$
+
+Sitemap: https://www.saez-etancheite.fr/sitemap.xml

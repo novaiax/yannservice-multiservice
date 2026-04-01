@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.pappers.fr)",
+      "WebFetch(domain:www.societe.com)",
+      "WebFetch(domain:my.maptons.com)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

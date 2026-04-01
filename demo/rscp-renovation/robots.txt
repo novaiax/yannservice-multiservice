@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rscp-renovation.fr/sitemap.xml

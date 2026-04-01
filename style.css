@@ -386,6 +386,26 @@ ul { list-style: none; }
     background: #20bd5a;
 }
 
+.btn-demo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--gray-100);
+    color: var(--black);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all var(--transition);
+    white-space: nowrap;
+    border: 1px solid var(--gray-200);
+}
+.btn-demo:hover {
+    background: var(--gray-200);
+    border-color: var(--gray-300);
+}
+
 .btn-phone {
     display: inline-flex;
     align-items: center;

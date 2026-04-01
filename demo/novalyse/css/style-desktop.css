@@ -1,0 +1,417 @@
+/* ==============================================
+   NOVALYSE — DESKTOP OVERRIDES (min-width: 1024px)
+   ============================================== */
+
+:root {
+    --header-h: 80px;
+}
+
+body {
+    padding-bottom: 0;
+}
+
+.container {
+    padding: 0 48px;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.section-title {
+    font-size: 52px;
+}
+
+.section-subtitle {
+    font-size: 17px;
+    max-width: 580px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.section-head {
+    text-align: left;
+    margin-bottom: 64px;
+}
+
+/* --- CALL BAR hidden on desktop --- */
+.call-bar {
+    display: none;
+}
+
+/* --- HEADER desktop --- */
+.header__nav {
+    display: block;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__logo-img {
+    height: 34px;
+}
+
+/* --- HERO desktop (left-aligned) --- */
+.hero__content {
+    text-align: left;
+    max-width: 1240px;
+    width: 100%;
+    padding: 0 48px;
+}
+
+.hero__title {
+    font-size: 72px;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    max-width: 560px;
+}
+
+.hero__actions {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.hero__stats {
+    justify-content: flex-start;
+    gap: 48px;
+}
+
+.hero__stat-value {
+    font-size: 40px;
+}
+
+.hero__scroll-indicator {
+    display: flex;
+}
+
+/* --- PAGE HERO desktop --- */
+.page-hero {
+    padding: 200px 0 100px;
+}
+
+.page-hero__title {
+    font-size: 56px;
+}
+
+.page-hero__subtitle {
+    font-size: 17px;
+}
+
+/* --- SERVICES grid desktop --- */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card__img {
+    height: 240px;
+}
+
+.service-card__body {
+    padding: 32px;
+}
+
+.service-card__title {
+    font-size: 28px;
+}
+
+/* --- TRUST BANNER desktop --- */
+.trust-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.trust-banner__sep {
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+}
+
+/* --- PROCESS desktop --- */
+.process__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.process__num {
+    font-size: 64px;
+}
+
+.process__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 16px 0;
+}
+
+/* --- NUMBERS BAND desktop --- */
+.numbers-band {
+    padding: 64px 0;
+}
+
+.numbers-band__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    text-align: left;
+}
+
+.numbers-band__value {
+    font-size: 64px;
+}
+
+.numbers-band__plus {
+    font-size: 36px;
+}
+
+/* --- ABOUT INTRO desktop --- */
+.about-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-intro__img-wrap img {
+    height: 520px;
+}
+
+.about-intro__accent {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--dark);
+    z-index: -1;
+}
+
+/* --- GALLERY desktop --- */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery__item--tall {
+    grid-row: span 2;
+}
+
+.gallery__item--tall img {
+    height: 100%;
+    min-height: 100%;
+}
+
+.gallery__item img {
+    height: 260px;
+}
+
+.gallery__caption {
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all .4s var(--ease);
+}
+
+.gallery__item:hover .gallery__caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- REVIEWS desktop --- */
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.review-card {
+    padding: 36px;
+}
+
+/* --- ZONE desktop --- */
+.zone__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.zone__map {
+    height: 100%;
+    min-height: 480px;
+}
+
+/* --- CONTACT INTRO desktop --- */
+.contact-intro__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 56px 64px;
+    gap: 40px;
+}
+
+.contact-intro__inner .section-title {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.contact-intro__inner p {
+    margin-bottom: 0;
+}
+
+.contact-intro__actions {
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+/* --- GALLERY CTA left --- */
+.gallery__cta {
+    text-align: left;
+}
+
+/* --- STATS left --- */
+.stats__grid {
+    text-align: left;
+}
+
+/* --- FILTER BAR left (already flex-start by default) --- */
+
+/* --- SERVICE DETAIL desktop --- */
+.service-detail__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.service-detail__grid--reverse .service-detail__visual {
+    order: -1;
+}
+
+.service-detail__visual img {
+    height: 500px;
+}
+
+/* --- REALISATIONS PAGE desktop --- */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.realisation-card__img {
+    height: 280px;
+}
+
+/* --- ABOUT PAGE desktop --- */
+.about-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-story__visual img {
+    height: 480px;
+}
+
+.values__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+}
+
+.stats__number {
+    font-size: 56px;
+}
+
+.certifs__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* --- CONTACT PAGE desktop --- */
+.contact-page__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-page__form-wrap {
+    padding: 48px;
+}
+
+.contact-map iframe {
+    height: 450px;
+}
+
+/* --- FOOTER desktop --- */
+.footer {
+    padding: 80px 0 0;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 60px;
+}
+
+.footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 24px 0;
+}
+
+/* --- HOVER EFFECTS (desktop) --- */
+.service-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 4px 24px rgba(44,48,56,0.06);
+}
+
+.review-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 4px 20px rgba(44,48,56,0.04);
+}
+
+.realisation-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 4px 20px rgba(44,48,56,0.04);
+}
+
+/* --- SMOOTH PARALLAX HINT --- */
+@supports (scroll-timeline: auto) {
+    .hero__bg-img {
+        animation: heroParallax linear;
+        animation-timeline: scroll();
+        animation-range: 0vh 100vh;
+    }
+    @keyframes heroParallax {
+        to { transform: scale(1.05) translateY(80px); }
+    }
+}

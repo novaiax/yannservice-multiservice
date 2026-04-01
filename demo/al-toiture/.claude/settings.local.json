@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:trouver-couvreur-toiture.fr)",
+      "WebFetch(domain:couvreur-colmar.toitures-68.fr)"
+    ]
+  }
+}

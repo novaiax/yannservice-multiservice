@@ -1,0 +1,170 @@
+/* ================================================
+   OMY CONCEPT - STYLE DESKTOP (1024px+)
+   Loaded via media="(min-width: 1024px)"
+   ================================================ */
+
+/* --- GENERAL --- */
+body{padding-bottom:0}
+h1{font-size:3.2rem}
+h2{font-size:2.4rem}
+h3{font-size:1.25rem}
+.container{padding:0 48px}
+.section{padding:100px 0}
+.section-header{margin-bottom:56px}
+
+/* ================================================
+   HEADER
+   ================================================ */
+.header-inner{padding:0 48px;height:72px}
+.nav-desktop{display:block}
+.nav-desktop ul{display:flex;gap:32px;align-items:center}
+.nav-desktop a{font-family:var(--font-heading);font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--color-text-secondary);transition:var(--transition);position:relative}
+.nav-desktop a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--color-primary);transition:width .3s ease}
+.nav-desktop a:hover,.nav-desktop a.active{color:var(--color-primary)}
+.nav-desktop a:hover::after,.nav-desktop a.active::after{width:100%}
+
+.header-phone{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-heading);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary);transition:var(--transition)}
+.header-phone:hover{color:var(--color-accent)}
+.header-phone svg{stroke:currentColor}
+
+.hamburger{display:none}
+
+/* Hide mobile CTA on desktop */
+.mobile-cta{display:none}
+
+/* ================================================
+   HERO
+   ================================================ */
+.hero{min-height:100vh;padding:140px 48px 80px;align-items:center}
+.hero-content h1{font-size:3.8rem;letter-spacing:.03em}
+.hero-sub{font-size:1.05rem;max-width:520px}
+.hero-btns{flex-direction:row}
+.hero-btns .btn{padding:16px 36px}
+.hero-stats{max-width:520px;gap:32px;padding-top:32px}
+.stat-number{font-size:2.2rem}
+.stat-label{font-size:.7rem}
+
+/* ================================================
+   PAGE HERO
+   ================================================ */
+.page-hero{min-height:45vh;padding:140px 48px 60px}
+.page-hero-sm{min-height:35vh}
+.page-hero-content h1{font-size:3rem}
+.page-hero-content p{font-size:1rem;max-width:560px}
+
+/* ================================================
+   SERVICES GRID
+   ================================================ */
+.services-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+.service-img{height:220px}
+.service-body{padding:28px}
+.service-body h3{font-size:1.1rem}
+
+/* ================================================
+   ABOUT HOME
+   ================================================ */
+.about-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-img img{height:500px}
+.about-text h2{font-size:2rem}
+.about-text p{font-size:.95rem}
+
+/* ================================================
+   GALLERY
+   ================================================ */
+.gallery-grid{grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery-item-lg{grid-row:span 2}
+.gallery-full{grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery-full-item{aspect-ratio:4/3}
+
+/* ================================================
+   AVIS
+   ================================================ */
+.avis-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+.avis-card{padding:36px 32px}
+
+/* ================================================
+   ZONE
+   ================================================ */
+.zone-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.zone-map iframe{height:100%;min-height:450px}
+
+/* ================================================
+   CTA
+   ================================================ */
+.cta-inner{padding:48px 0}
+.cta-btns{flex-direction:row;justify-content:center}
+
+/* ================================================
+   SERVICE DETAIL
+   ================================================ */
+.service-detail-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.service-detail-reverse .service-detail-grid{direction:rtl}
+.service-detail-reverse .service-detail-grid>*{direction:ltr}
+.service-detail-img img{height:480px}
+.service-detail-text h2{font-size:2rem}
+
+/* ================================================
+   ABOUT PAGE
+   ================================================ */
+.about-story-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-story-reverse{direction:rtl}
+.about-story-reverse>*{direction:ltr}
+.about-story-img img{height:480px}
+.about-story-text h2{font-size:2rem}
+
+.values-grid{grid-template-columns:repeat(4,1fr);gap:24px}
+.value-card{padding:36px 28px}
+
+.numbers-grid{grid-template-columns:repeat(4,1fr);gap:32px;padding:32px 0}
+.number-value{font-size:3rem}
+.number-label{font-size:.75rem}
+
+.certif-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+.certif-card{padding:36px 28px}
+
+/* ================================================
+   CONTACT PAGE
+   ================================================ */
+.contact-grid{grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:start}
+.contact-form-wrap h2{font-size:1.8rem}
+.contact-map iframe{height:400px}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+.footer{padding:64px 0 0}
+.footer-grid{grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
+
+/* ================================================
+   HOVER ENHANCEMENTS (desktop)
+   ================================================ */
+.service-card:hover{box-shadow:var(--shadow-lg)}
+.avis-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.value-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.certif-card{transition:all .4s cubic-bezier(.16,1,.3,1)}
+.certif-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.btn-primary:hover{box-shadow:0 6px 24px rgba(26,26,26,.2)}
+.gallery-item{cursor:pointer}
+.gallery-full-item{cursor:pointer}
+
+/* Nav link hover line animation */
+.nav-desktop a::after{transition:width .4s cubic-bezier(.16,1,.3,1)}
+
+/* Service detail image hover */
+.service-detail-img{overflow:hidden;position:relative}
+.service-detail-img img{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.service-detail:hover .service-detail-img img{transform:scale(1.04)}
+
+/* ================================================
+   LARGE SCREENS (1440px+)
+   ================================================ */
+@media(min-width:1440px){
+  .container{padding:0 64px}
+  .header-inner{padding:0 64px}
+  .hero{padding:160px 64px 100px}
+  .hero-content h1{font-size:4.2rem}
+  .page-hero{padding:160px 64px 80px}
+  .page-hero-content h1{font-size:3.4rem}
+  .services-grid{gap:28px}
+  .service-img{height:260px}
+}

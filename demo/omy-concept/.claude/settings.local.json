@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.pappers.fr)",
+      "Bash(mkdir -p \"D:/code/sites/pages web/site demos/creation/omy concept/image\")",
+      "Bash(mv \"D:/code/sites/pages web/site demos/creation/omy concept/\"*.jpg \"D:/code/sites/pages web/site demos/creation/omy concept/image/\")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
