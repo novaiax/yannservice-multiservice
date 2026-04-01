@@ -529,7 +529,7 @@
         });
 
         // Smart iframe manager: load visible, unload hidden, max 3 on mobile
-        var MAX_LOADED = isMobile ? 3 : 50;
+        var MAX_LOADED = isMobile ? 2 : 50;
         window.loadedIframes = [];
 
         window.iframeObserver = new IntersectionObserver(function(entries) {
@@ -543,16 +543,16 @@
                         // If over limit, unload the oldest
                         while (window.loadedIframes.length > MAX_LOADED) {
                             var old = window.loadedIframes.shift();
-                            if (old && old.src) {
+                            if (old && old.src && old.src !== 'about:blank') {
                                 old.dataset.src = old.src;
-                                old.removeAttribute('src');
+                                old.src = 'about:blank';
                             }
                         }
                     }
-                } else if (isMobile && iframe.src) {
-                    // Mobile: unload when out of view
+                } else if (isMobile && iframe.src && iframe.src !== 'about:blank') {
+                    // Mobile: force unload when out of view
                     iframe.dataset.src = iframe.src;
-                    iframe.removeAttribute('src');
+                    iframe.src = 'about:blank';
                     window.loadedIframes = window.loadedIframes.filter(function(f) { return f !== iframe; });
                 }
             });
