@@ -1,3 +1,8 @@
 #!/bin/bash
 mkdir -p dist
-rsync -a --exclude='.git' --exclude='.claude' --exclude='node_modules' --exclude='dist' --exclude='build.sh' . dist/
+find . -mindepth 1 -maxdepth 1 \
+  ! -name '.git' \
+  ! -name '.claude' \
+  ! -name 'node_modules' \
+  ! -name 'dist' \
+  -exec cp -r {} dist/ \;
