@@ -253,20 +253,11 @@
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
             .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .demo-card { cursor: default; }
-            .demo-thumb { height: 55vh; overflow: scroll; -webkit-overflow-scrolling: touch; }
-            .demo-thumb::after { display: none; }
+            .demo-thumb { height: 220px; }
             .demo-thumb-inner {
                 width: 1440px;
-                height: 5000px;
-                transform-origin: top left;
+                height: 900px;
                 transform: scale(0.25);
-                pointer-events: auto;
-            }
-            .demo-thumb-inner iframe {
-                width: 1440px;
-                height: 20000px;
-                pointer-events: auto;
             }
             .demo-card-footer { padding: 0.75rem 1rem; }
             .demo-card-title { font-size: 0.875rem; }
@@ -493,9 +484,7 @@
             var card = document.createElement('div');
             card.className = 'demo-card';
             card.dataset.sector = d.filter;
-            if (!isMobile) {
-                card.onclick = function() { openFs(d.src, d.title); };
-            }
+            card.onclick = function() { openFs(d.src, d.title); };
 
             var folderName = getScreenshotName(d.src);
             var isBasicdept = (folderName === 'basicdept');
