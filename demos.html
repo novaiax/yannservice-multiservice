@@ -492,6 +492,7 @@
             var keepIframe = ['metz-motors', 'salamone-construction', 'al-toiture', 'viss-couverture'];
             var folderName = getScreenshotName(d.src);
             var useIframe = !isMobile || keepIframe.indexOf(folderName) !== -1;
+            var hasVideo = (folderName === 'basicdept');
 
             var thumbContent;
             if (useIframe) {
@@ -500,6 +501,12 @@
                         '<div class="demo-thumb-inner">' +
                             '<iframe data-src="' + d.src + '" sandbox="allow-same-origin allow-scripts" title="' + d.title + '"></iframe>' +
                         '</div>' +
+                    '</div>';
+            } else if (isMobile && hasVideo) {
+                // BASIC/DEPT: show 3s video preview on mobile
+                thumbContent =
+                    '<div class="demo-thumb">' +
+                        '<video src="demo/screenshots/' + folderName + '-preview.mp4" autoplay muted loop playsinline class="demo-thumb-img"></video>' +
                     '</div>';
             } else {
                 thumbContent =
