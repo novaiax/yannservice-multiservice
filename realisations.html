@@ -253,21 +253,25 @@
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
             .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
-            /* Mobile: scaled desktop view, scrollable inside */
+            /* Mobile: scaled desktop view, fills card width */
             .demo-card { cursor: default; }
-            .demo-thumb { height: 300px; overflow: hidden; }
+            .demo-thumb {
+                height: 240px;
+                overflow: hidden;
+                position: relative;
+            }
             .demo-thumb::after { display: none; }
             .demo-thumb-inner {
                 width: 1440px;
-                height: 3000px;
-                transform: scale(0.26);
+                height: 900px;
+                transform: scale(calc((100vw - 72px) / 1440));
                 transform-origin: top left;
-                pointer-events: auto;
+                pointer-events: none;
             }
             .demo-thumb-inner iframe {
-                pointer-events: auto;
+                pointer-events: none;
                 width: 1440px;
-                height: 3000px;
+                height: 900px;
             }
             .demo-card-footer { padding: 0.75rem 1rem; }
             .demo-card-title { font-size: 0.875rem; }
