@@ -3054,6 +3054,31 @@ ul { list-style: none; }
    PRINT
    =================================== */
 
+/* Realisations preview grid */
+.realisations-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.realisations-preview-grid > a {
+    display: block;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    position: relative;
+    background: var(--gray-100);
+}
+@media (max-width: 768px) {
+    .realisations-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    .realisations-preview-grid > a > div {
+        transform: scale(0.25);
+    }
+}
+
 @media print {
     .nav, .whatsapp-float, .mobile-cta-bar, .mobile-menu-toggle { display: none !important; }
     .hero { padding-top: 2rem; }
