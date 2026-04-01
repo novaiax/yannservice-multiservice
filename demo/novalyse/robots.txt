@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.novalyse.fr/sitemap.xml
+Sitemap: https://novalysenergie.fr/sitemap.xml

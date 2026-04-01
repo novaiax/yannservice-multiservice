@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:annuaire-entreprises.data.gouv.fr)",
-      "mcp__Claude_Preview__preview_start"
-    ]
-  }
-}

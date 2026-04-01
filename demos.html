@@ -241,16 +241,30 @@
             .demos-hero { padding: 6rem 0 1.5rem; }
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
-            .demos-grid { grid-template-columns: 1fr; }
-            .demo-thumb { height: 220px; }
+            .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .demo-thumb { height: 240px; }
             .demo-thumb-inner {
                 width: 1440px;
                 height: 900px;
-                transform: scale(0.25);
+                transform: scale(0.26);
             }
+            .demo-card-footer { padding: 0.75rem 1rem; }
+            .demo-card-title { font-size: 0.875rem; }
+            .demo-card-sector { font-size: 0.6875rem; }
             .demos-cta-title { font-size: 1.25rem; }
             .device-toggle { display: none; }
             .fullscreen-bar { padding: 0.5rem 1rem; }
+            .filter-bar { gap: 0.375rem; flex-wrap: wrap; justify-content: center; }
+            .filter-btn { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+        }
+
+        @media (max-width: 480px) {
+            .demo-thumb { height: 200px; }
+            .demo-thumb-inner {
+                transform: scale(0.22);
+            }
+            .demos-hero .section-heading { font-size: 1.25rem; }
+            .demos-hero-subtitle { font-size: 0.8125rem; }
         }
     </style>
 </head>
@@ -417,19 +431,31 @@
     <script>
     (function() {
         var demos = [
+            // Nouveaux sites (dans l'ordre demande)
             { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/saez-etancheite/', title: 'SAEZ Etancheite', sector: 'Etancheite & isolation - Selestat', badge: 'Etancheite', filter: 'btp' },
+            { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/vk-construction/', title: 'WK Constructions', sector: 'Construction & maconnerie - Haguenau', badge: 'Construction', filter: 'btp' },
+            { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
+            { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Renovation energetique - Montpellier', badge: 'Energie', filter: 'energie' },
+            { src: 'demo/artducarreau/', title: "L'Art Du Carreau", sector: 'Carreleur premium - Mulhouse', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/carreau-design-wittenheim/', title: 'Carreaux Design', sector: 'Carreleur premium - Wittenheim', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/laurent-toiture/', title: 'Laurent Toiture', sector: 'Couvreur-zingueur - Strasbourg', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/carreaux-design-ploufragan/', title: 'Carreaux&Design', sector: 'Carreleur - Ploufragan', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/garage-deux-freres/', title: 'Garage des Deux Freres', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
+            { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' },
+            { src: 'demo/lorraine-peinture/', title: 'Lorraine Peinture 57', sector: 'Peintre en batiment - Metz', badge: 'Peinture', filter: 'btp' },
+            // Sites ajoutes
+            { src: 'demo/ape-plomberie/', title: 'APE Plomberie', sector: 'Plomberie & renovation - Ostwald', badge: 'Plomberie', filter: 'btp' },
+            { src: 'demo/strasbourg-carrelage/', title: 'Strasbourg Carrelage', sector: 'Carrelage & revetement - Strasbourg', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/basicdept/', title: 'BASIC/DEPT', sector: 'Agence digitale & branding', badge: 'Agence', filter: 'autre' },
+            { src: 'demo/prestige-paysages/', title: 'Prestige Paysages', sector: 'Paysagiste & amenagement exterieur', badge: 'Paysagiste', filter: 'autre' },
+            // Sites existants conserves
             { src: 'demo/metz-motors/', title: 'Metz Motors', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/lion-color/', title: 'Lion Color', sector: 'Peintre professionnel - Strasbourg', badge: 'Peinture', filter: 'btp' },
-            { src: 'demo/omy-concept/', title: 'OMY Concept', sector: 'Carrelage & revetement - Geispolsheim', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/salamone-construction/', title: 'Giuseppe Salamone', sector: 'Maconnerie & construction', badge: 'Construction', filter: 'btp' },
-            { src: 'demo/hb-auto/', title: 'HB Auto', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/al-toiture/', title: 'AL Toiture 68', sector: 'Couvreur - Colmar', badge: 'Toiture', filter: 'btp' },
-            { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' },
-            { src: 'demo/saez-etancheite/', title: 'SAEZ Etancheite', sector: 'Etancheite & isolation - Selestat', badge: 'Etancheite', filter: 'btp' },
-            { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
-            { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Toiture, isolation & energie - Lyon', badge: 'Energie', filter: 'energie' },
-            { src: 'demo/salon-beaute/page salon 1/', title: 'Salon Eclat', sector: 'Coiffure professionnelle', badge: 'Beaute', filter: 'beaute' },
-            { src: 'demo/serrurier/', title: 'Hirstel-Hugel', sector: 'Serrurerie & menuiserie - Strasbourg', badge: 'Serrurerie', filter: 'autre' }
+            { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' }
         ];
 
         var grid = document.getElementById('demosGrid');
