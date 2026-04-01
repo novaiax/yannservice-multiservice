@@ -543,10 +543,6 @@
                             if (old && old.src) { old.dataset.src = old.src; old.removeAttribute('src'); }
                         }
                     }
-                } else if (isMobile && iframe.src) {
-                    iframe.dataset.src = iframe.src;
-                    iframe.removeAttribute('src');
-                    loadedList = loadedList.filter(function(f) { return f !== iframe; });
                 }
             });
         }, { rootMargin: isMobile ? '100px' : '200px' });
