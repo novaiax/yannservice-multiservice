@@ -253,12 +253,22 @@
             .demos-hero .section-heading { font-size: 1.5rem; }
             .demos-hero-subtitle { font-size: 0.9375rem; }
             .demos-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .demo-thumb { height: 220px !important; max-height: 220px !important; overflow: hidden !important; }
+            .demo-thumb {
+                height: 220px !important;
+                clip: rect(0, auto, 220px, 0);
+                clip-path: inset(0 0 0 0);
+                overflow: hidden !important;
+                position: relative !important;
+                contain: strict;
+            }
             .demo-thumb-inner {
                 width: 1440px !important;
                 height: 900px !important;
                 transform: scale(0.25) !important;
                 transform-origin: top left;
+                position: absolute !important;
+                top: 0;
+                left: 0;
             }
             .demo-card-footer { padding: 0.75rem 1rem; }
             .demo-card-title { font-size: 0.875rem; }
