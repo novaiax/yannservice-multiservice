@@ -1,0 +1,6 @@
+name = "abonnement-site"
+compatibility_date = "2025-09-27"
+
+[assets]
+directory = "./"
+not_include_patterns = [".git", ".claude", "node_modules", "*.md"]
