@@ -524,13 +524,16 @@
             grid.appendChild(card);
         });
 
-        // Lazy load: desktop loads all visible, mobile max 2 at a time
+        // Observe CARDS (not iframes) to detect visibility correctly
+        // On mobile, iframe layout height is 900px but card is 220px — observing iframe gives wrong results
         var MAX_LOADED = isMobile ? 2 : 50;
         var loadedList = [];
 
-        window.iframeObserver = new IntersectionObserver(function(entries) {
+        window.cardObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
-                var iframe = entry.target;
+                var card = entry.target;
+                var iframe = card.querySelector('iframe');
+                if (!iframe) return;
                 if (entry.isIntersecting) {
                     if (!iframe.src && iframe.dataset.src) {
                         iframe.src = iframe.dataset.src;
@@ -545,11 +548,11 @@
                     iframe.removeAttribute('src');
                     loadedList = loadedList.filter(function(f) { return f !== iframe; });
                 }
-                });
-            }, { rootMargin: isMobile ? '50px' : '200px' });
-            document.querySelectorAll('.demo-thumb-inner iframe').forEach(function(iframe) {
-                window.iframeObserver.observe(iframe);
             });
+        }, { rootMargin: isMobile ? '100px' : '200px' });
+        document.querySelectorAll('.demo-card').forEach(function(card) {
+            window.cardObserver.observe(card);
+        });
 
         // Filters
         document.querySelectorAll('.filter-btn').forEach(function(btn) {
