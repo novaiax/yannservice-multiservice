@@ -431,13 +431,16 @@
     <script>
     (function() {
         var demos = [
-            // Nouveaux sites (dans l'ordre demande)
-            { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/saez-etancheite/', title: 'SAEZ Etancheite', sector: 'Etancheite & isolation - Selestat', badge: 'Etancheite', filter: 'btp' },
-            { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/ape-plomberie/', title: 'APE Plomberie', sector: 'Plomberie & renovation - Ostwald', badge: 'Plomberie', filter: 'btp' },
+            { src: 'demo/strasbourg-carrelage/', title: 'Strasbourg Carrelage', sector: 'Carrelage & revetement - Strasbourg', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/vk-construction/', title: 'WK Constructions', sector: 'Construction & maconnerie - Haguenau', badge: 'Construction', filter: 'btp' },
+            { src: 'demo/basicdept/', title: 'BASIC/DEPT', sector: 'Agence digitale & branding', badge: 'Agence', filter: 'autre' },
+            { src: 'demo/metz-motors/', title: 'Metz Motors', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
+            { src: 'demo/salamone-construction/', title: 'Giuseppe Salamone', sector: 'Maconnerie & construction', badge: 'Construction', filter: 'btp' },
+            { src: 'demo/al-toiture/', title: 'AL Toiture 68', sector: 'Couvreur - Colmar', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
             { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
-            { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Renovation energetique - Montpellier', badge: 'Energie', filter: 'energie' },
             { src: 'demo/artducarreau/', title: "L'Art Du Carreau", sector: 'Carreleur premium - Mulhouse', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/carreau-design-wittenheim/', title: 'Carreaux Design', sector: 'Carreleur premium - Wittenheim', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/laurent-toiture/', title: 'Laurent Toiture', sector: 'Couvreur-zingueur - Strasbourg', badge: 'Toiture', filter: 'btp' },
@@ -445,17 +448,11 @@
             { src: 'demo/garage-deux-freres/', title: 'Garage des Deux Freres', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' },
             { src: 'demo/lorraine-peinture/', title: 'Lorraine Peinture 57', sector: 'Peintre en batiment - Metz', badge: 'Peinture', filter: 'btp' },
-            // Sites ajoutes
-            { src: 'demo/ape-plomberie/', title: 'APE Plomberie', sector: 'Plomberie & renovation - Ostwald', badge: 'Plomberie', filter: 'btp' },
-            { src: 'demo/strasbourg-carrelage/', title: 'Strasbourg Carrelage', sector: 'Carrelage & revetement - Strasbourg', badge: 'Carrelage', filter: 'btp' },
-            { src: 'demo/basicdept/', title: 'BASIC/DEPT', sector: 'Agence digitale & branding', badge: 'Agence', filter: 'autre' },
             { src: 'demo/prestige-paysages/', title: 'Prestige Paysages', sector: 'Paysagiste & amenagement exterieur', badge: 'Paysagiste', filter: 'autre' },
-            // Sites existants conserves
-            { src: 'demo/metz-motors/', title: 'Metz Motors', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
+            { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' },
             { src: 'demo/lion-color/', title: 'Lion Color', sector: 'Peintre professionnel - Strasbourg', badge: 'Peinture', filter: 'btp' },
-            { src: 'demo/salamone-construction/', title: 'Giuseppe Salamone', sector: 'Maconnerie & construction', badge: 'Construction', filter: 'btp' },
-            { src: 'demo/al-toiture/', title: 'AL Toiture 68', sector: 'Couvreur - Colmar', badge: 'Toiture', filter: 'btp' },
-            { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' }
+            { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
+            { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Toiture, isolation & energie - Lyon', badge: 'Energie', filter: 'energie' }
         ];
 
         var grid = document.getElementById('demosGrid');
