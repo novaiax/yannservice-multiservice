@@ -489,7 +489,7 @@
             card.onclick = function() { openFs(d.src, d.title); };
 
             // Sites with animations that should keep iframes on mobile
-            var keepIframe = ['metz-motors', 'basicdept', 'salamone-construction', 'al-toiture', 'viss-couverture'];
+            var keepIframe = ['metz-motors', 'salamone-construction', 'al-toiture', 'viss-couverture'];
             var folderName = getScreenshotName(d.src);
             var useIframe = !isMobile || keepIframe.indexOf(folderName) !== -1;
 
