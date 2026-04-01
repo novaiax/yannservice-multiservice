@@ -526,7 +526,7 @@
 
         // Observe CARDS (not iframes) to detect visibility correctly
         // On mobile, iframe layout height is 900px but card is 220px — observing iframe gives wrong results
-        var MAX_LOADED = isMobile ? 2 : 50;
+        var MAX_LOADED = isMobile ? 3 : 50;
         var loadedList = [];
 
         window.cardObserver = new IntersectionObserver(function(entries) {
