@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARAKUS & CO | Artisan Carreleur à Habsheim</title>
+    <meta name="description" content="KARAKUS & CO, artisan carreleur à Habsheim. Pose de carrelage, salle de bain, cuisine, terrasse. Qualité artisanale, finitions impeccables.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-tile"></div>
+            <div class="loader-tile"></div>
+            <div class="loader-tile"></div>
+            <div class="loader-tile"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-k">K</span>
+                <span class="nav-logo-text">ARAKUS <span class="nav-logo-amp">&</span> CO</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#realisations" class="nav-link">Réalisations</a>
+                <a href="#testimonials" class="nav-link">Témoignages</a>
+                <a href="#contact" class="nav-link nav-link-cta">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-marble"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="hero-badge-line"></span>
+                <span>Artisan carreleur depuis 2015</span>
+                <span class="hero-badge-line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line reveal"><span>La perfection,</span></span>
+                <span class="hero-title-line reveal"><span>carreau par carreau.</span></span>
+            </h1>
+            <p class="hero-subtitle reveal">Nous transformons vos espaces avec un savoir-faire artisanal d'exception. Chaque projet est une œuvre unique, pensée dans les moindres détails.</p>
+            <div class="hero-actions reveal">
+                <a href="#contact" class="btn btn-primary">Demander un devis</a>
+                <a href="#realisations" class="btn btn-ghost">Voir nos réalisations</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Découvrir</span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Carrelage intérieur</span>
+            <span class="marquee-dot">◆</span>
+            <span>Salle de bain</span>
+            <span class="marquee-dot">◆</span>
+            <span>Cuisine</span>
+            <span class="marquee-dot">◆</span>
+            <span>Terrasse</span>
+            <span class="marquee-dot">◆</span>
+            <span>Mosaïque</span>
+            <span class="marquee-dot">◆</span>
+            <span>Rénovation</span>
+            <span class="marquee-dot">◆</span>
+            <span>Carrelage intérieur</span>
+            <span class="marquee-dot">◆</span>
+            <span>Salle de bain</span>
+            <span class="marquee-dot">◆</span>
+            <span>Cuisine</span>
+            <span class="marquee-dot">◆</span>
+            <span>Terrasse</span>
+            <span class="marquee-dot">◆</span>
+            <span>Mosaïque</span>
+            <span class="marquee-dot">◆</span>
+            <span>Rénovation</span>
+            <span class="marquee-dot">◆</span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-img-wrapper">
+                        <div class="about-img" style="background: linear-gradient(135deg, var(--andesite) 0%, var(--andesite-deep) 100%);">
+                            <div class="about-img-pattern"></div>
+                            <i class="fas fa-hard-hat about-img-icon"></i>
+                        </div>
+                        <div class="about-experience">
+                            <span class="about-experience-number" data-count="10">0</span>
+                            <span class="about-experience-label">ans<br>d'expérience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-label reveal">
+                        <span class="section-label-line"></span>
+                        <span>Notre histoire</span>
+                    </div>
+                    <h2 class="section-title reveal">Un savoir-faire<br><em>transmis avec passion</em></h2>
+                    <p class="about-text reveal">Depuis notre création à Habsheim, KARAKUS & CO s'est imposé comme une référence du carrelage haut de gamme en Alsace. Notre philosophie est simple : chaque surface mérite une attention absolue.</p>
+                    <p class="about-text reveal">Nous sélectionnons les meilleurs matériaux — grès cérame, pierre naturelle, mosaïque artisanale — et les posons avec une précision millimétrique. Le résultat ? Des espaces qui inspirent, qui durent, qui impressionnent.</p>
+                    <div class="about-values reveal">
+                        <div class="about-value">
+                            <div class="about-value-icon"><i class="fas fa-gem"></i></div>
+                            <div>
+                                <strong>Excellence</strong>
+                                <span>Des finitions irréprochables</span>
+                            </div>
+                        </div>
+                        <div class="about-value">
+                            <div class="about-value-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <strong>Confiance</strong>
+                                <span>Transparence & respect des délais</span>
+                            </div>
+                        </div>
+                        <div class="about-value">
+                            <div class="about-value-icon"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <strong>Durabilité</strong>
+                                <span>Des matériaux nobles & pérennes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+        <div class="services-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="section-label-line"></span>
+                    <span>Ce que nous faisons</span>
+                </div>
+                <h2 class="section-title reveal">Nos expertises<br><em>à votre service</em></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-card-number">01</div>
+                    <div class="service-card-icon"><i class="fas fa-bath"></i></div>
+                    <h3 class="service-card-title">Salle de bain</h3>
+                    <p class="service-card-text">Transformation complète de votre salle de bain. Du sol aux murs, nous créons des espaces élégants et fonctionnels avec des matériaux haut de gamme.</p>
+                    <div class="service-card-line"></div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-number">02</div>
+                    <div class="service-card-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="service-card-title">Cuisine</h3>
+                    <p class="service-card-text">Crédences sur mesure, sols résistants et plans de travail en carrelage. Votre cuisine prend une nouvelle dimension avec nos poses soignées.</p>
+                    <div class="service-card-line"></div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-number">03</div>
+                    <div class="service-card-icon"><i class="fas fa-home"></i></div>
+                    <h3 class="service-card-title">Intérieur</h3>
+                    <p class="service-card-text">Séjour, entrée, couloir — nous habillons chaque pièce avec le carrelage parfait. Grand format, imitation parquet, pierre naturelle.</p>
+                    <div class="service-card-line"></div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-number">04</div>
+                    <div class="service-card-icon"><i class="fas fa-sun"></i></div>
+                    <h3 class="service-card-title">Terrasse & Extérieur</h3>
+                    <p class="service-card-text">Dalles sur plots, carrelage antidérapant, contours de piscine. Nous prolongeons votre intérieur vers l'extérieur avec style et durabilité.</p>
+                    <div class="service-card-line"></div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-number">05</div>
+                    <div class="service-card-icon"><i class="fas fa-th"></i></div>
+                    <h3 class="service-card-title">Mosaïque</h3>
+                    <p class="service-card-text">Art et précision fusionnent dans nos réalisations mosaïques. Frise décorative, douche italienne, niche murale — des créations uniques.</p>
+                    <div class="service-card-line"></div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-number">06</div>
+                    <div class="service-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="service-card-title">Rénovation</h3>
+                    <p class="service-card-text">Dépose de l'ancien, ragréage, étanchéité et repose. Nous redonnons vie à vos surfaces avec un résultat neuf garanti.</p>
+                    <div class="service-card-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-number" data-count="350">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Projets réalisés</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat reveal">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">Années d'expérience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat reveal">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-percent">%</span>
+                    <span class="stat-label">Clients satisfaits</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat reveal">
+                    <span class="stat-number" data-count="15000">0</span>
+                    <span class="stat-unit">m²</span>
+                    <span class="stat-label">De surface posée</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realisations -->
+    <section class="realisations section" id="realisations">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="section-label-line"></span>
+                    <span>Portfolio</span>
+                </div>
+                <h2 class="section-title reveal">Nos plus belles<br><em>réalisations</em></h2>
+            </div>
+            <div class="gallery-filters reveal">
+                <button class="gallery-filter active" data-filter="all">Tout</button>
+                <button class="gallery-filter" data-filter="sdb">Salle de bain</button>
+                <button class="gallery-filter" data-filter="cuisine">Cuisine</button>
+                <button class="gallery-filter" data-filter="interieur">Intérieur</button>
+                <button class="gallery-filter" data-filter="exterieur">Extérieur</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-lg reveal" data-category="sdb">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #B8A594 0%, #8C7B6B 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-bath gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Salle de bain</span>
+                        <h3 class="gallery-item-title">Suite parentale en marbre</h3>
+                        <p class="gallery-item-desc">Habsheim — Grès cérame imitation marbre Calacatta</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="cuisine">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #A09484 0%, #7A6E62 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-utensils gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Cuisine</span>
+                        <h3 class="gallery-item-title">Crédence géométrique</h3>
+                        <p class="gallery-item-desc">Mulhouse — Zellige artisanal blanc</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="interieur">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #C4B5A4 0%, #9A8B7A 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-home gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Intérieur</span>
+                        <h3 class="gallery-item-title">Séjour grand format</h3>
+                        <p class="gallery-item-desc">Rixheim — Dalles 120x60 effet béton ciré</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="exterieur">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #9A9080 0%, #706658 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-sun gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Extérieur</span>
+                        <h3 class="gallery-item-title">Terrasse contemporaine</h3>
+                        <p class="gallery-item-desc">Riedisheim — Dalles sur plots 2cm</p>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-lg reveal" data-category="sdb">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #D4C5B5 0%, #A89888 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-shower gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Salle de bain</span>
+                        <h3 class="gallery-item-title">Douche italienne mosaïque</h3>
+                        <p class="gallery-item-desc">Illzach — Mosaïque pierre naturelle</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="interieur">
+                    <div class="gallery-item-inner" style="background: linear-gradient(135deg, #BEB0A0 0%, #8A7C6E 100%);">
+                        <div class="gallery-item-pattern"></div>
+                        <i class="fas fa-door-open gallery-item-icon"></i>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Intérieur</span>
+                        <h3 class="gallery-item-title">Hall d'entrée luxueux</h3>
+                        <p class="gallery-item-desc">Brunstatt — Marbre veiné gris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="section-label-line"></span>
+                    <span>Notre méthode</span>
+                </div>
+                <h2 class="section-title reveal">Un processus<br><em>rigoureux & transparent</em></h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="process-step-line"></div>
+                    <div class="process-step-dot"></div>
+                    <div class="process-step-content">
+                        <span class="process-step-number">01</span>
+                        <h3>Consultation</h3>
+                        <p>Visite gratuite à domicile. Nous écoutons votre projet, prenons les mesures et évaluons les contraintes techniques.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-line"></div>
+                    <div class="process-step-dot"></div>
+                    <div class="process-step-content">
+                        <span class="process-step-number">02</span>
+                        <h3>Devis détaillé</h3>
+                        <p>Un devis clair et transparent sous 48h. Pas de surprise, chaque poste est détaillé avec les matériaux recommandés.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-line"></div>
+                    <div class="process-step-dot"></div>
+                    <div class="process-step-content">
+                        <span class="process-step-number">03</span>
+                        <h3>Réalisation</h3>
+                        <p>Nos artisans interviennent avec soin et propreté. Chantier protégé, découpes précises, joints impeccables.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-line"></div>
+                    <div class="process-step-dot"></div>
+                    <div class="process-step-content">
+                        <span class="process-step-number">04</span>
+                        <h3>Livraison</h3>
+                        <p>Nettoyage complet et réception avec vous. Nous ne partons que lorsque le résultat est parfait à vos yeux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="section-label-line"></span>
+                    <span>Témoignages</span>
+                </div>
+                <h2 class="section-title reveal">Ce que disent<br><em>nos clients</em></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">"Travail remarquable pour notre salle de bain. Les finitions sont absolument parfaites, on se croirait dans un hôtel de luxe. L'équipe est ponctuelle, propre et très professionnelle."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S.M</div>
+                            <div>
+                                <strong>Sophie M.</strong>
+                                <span>Habsheim — Salle de bain complète</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">"KARAKUS & CO a transformé notre terrasse en véritable espace de vie. Le résultat est bluffant. Le carrelage est parfaitement posé et les finitions sont au top. Je recommande sans hésiter."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">P.D</div>
+                            <div>
+                                <strong>Pierre D.</strong>
+                                <span>Rixheim — Terrasse extérieure</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">"Deuxième fois que nous faisons appel à eux. La crédence de notre cuisine est magnifique. Toujours le même niveau d'exigence, un vrai plaisir de travailler avec cette équipe."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">L.K</div>
+                            <div>
+                                <strong>Laure K.</strong>
+                                <span>Mulhouse — Cuisine & crédence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-nav">
+                    <button class="testimonials-btn" id="prevTestimonial" aria-label="Précédent">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="testimonials-dots" id="testimonialDots"></div>
+                    <button class="testimonials-btn" id="nextTestimonial" aria-label="Suivant">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+        <div class="cta-marble"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Prêt à transformer<br>votre espace ?</h2>
+                <p class="cta-text">Contactez-nous pour une consultation gratuite. Nous étudions votre projet et vous proposons un devis détaillé sous 48h.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label reveal">
+                        <span class="section-label-line"></span>
+                        <span>Contact</span>
+                    </div>
+                    <h2 class="section-title reveal">Parlons de<br><em>votre projet</em></h2>
+                    <p class="contact-text reveal">Que ce soit pour une salle de bain, une cuisine ou une terrasse, nous sommes à votre écoute pour donner vie à vos envies.</p>
+                    <div class="contact-details reveal">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Adresse</strong>
+                                <span>Habsheim, 68440<br>Alsace, France</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <a href="tel:+33XXXXXXXXX">07 XX XX XX XX</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:contact@karakus-co.fr">contact@karakus-co.fr</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Horaires</strong>
+                                <span>Lun - Ven : 8h00 - 18h00<br>Sam : Sur rendez-vous</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet</label>
+                                <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Type de projet</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Sélectionnez un service</option>
+                                <option value="sdb">Salle de bain</option>
+                                <option value="cuisine">Cuisine</option>
+                                <option value="interieur">Carrelage intérieur</option>
+                                <option value="exterieur">Terrasse & Extérieur</option>
+                                <option value="mosaique">Mosaïque</option>
+                                <option value="renovation">Rénovation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Décrivez votre projet</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Surface approximative, matériaux souhaités, contraintes particulières..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Envoyer ma demande</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="nav-logo-k">K</span>
+                        <span class="nav-logo-text">ARAKUS <span class="nav-logo-amp">&</span> CO</span>
+                    </a>
+                    <p class="footer-desc">Artisan carreleur à Habsheim. L'excellence du carrelage, du sol au mur, de l'intérieur à l'extérieur.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Navigation</h4>
+                    <a href="#about">À propos</a>
+                    <a href="#services">Services</a>
+                    <a href="#realisations">Réalisations</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <a href="#services">Salle de bain</a>
+                    <a href="#services">Cuisine</a>
+                    <a href="#services">Terrasse</a>
+                    <a href="#services">Rénovation</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Zone d'intervention</h4>
+                    <span>Habsheim</span>
+                    <span>Mulhouse</span>
+                    <span>Rixheim</span>
+                    <span>Illzach</span>
+                    <span>Tout le Haut-Rhin</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KARAKUS & CO — Tous droits réservés</p>
+                <p class="footer-credit">Site démo conçu par <strong>NovaSpark Digital</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
