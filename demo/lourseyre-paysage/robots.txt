@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lourseyre-michel-espace-vert.fr/sitemap.xml

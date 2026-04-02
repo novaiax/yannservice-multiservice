@@ -1,5 +1,5 @@
 /**
- * PAGE 3 — FULL PREMIUM (APPEL ONLY)
+ * PAGE 3 - FULL PREMIUM (APPEL ONLY)
  * JavaScript pour interactions et animations
  */
 

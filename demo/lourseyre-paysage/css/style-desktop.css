@@ -1,0 +1,349 @@
+/* ============================================
+   LOURSEYRE MICHEL ESPACE VERT
+   Desktop Override (min-width: 1024px)
+   ============================================ */
+
+/* --- LAYOUT --- */
+.container { padding: 0 60px; }
+.section { padding: 110px 0; }
+
+/* --- HEADER DESKTOP --- */
+.header-inner { padding: 0 60px; height: 72px; }
+
+.logo-name { font-size: 1.15rem; }
+.logo-sub { font-size: 0.7rem; }
+.logo-icon { font-size: 2rem; }
+
+.main-nav { display: block; }
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-family: var(--font-title);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--grey);
+    transition: color var(--transition);
+    position: relative;
+    padding: 4px 0;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--green);
+    transition: width var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active { color: var(--white); }
+
+.main-nav a:hover::after,
+.main-nav a.active::after { width: 100%; }
+
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: color var(--transition);
+}
+
+.header-phone:hover { color: var(--green); }
+
+.header-phone .phone-icon { color: var(--green); font-size: 1.2rem; }
+.header-phone .phone-number { color: inherit; }
+
+.menu-toggle { display: none; }
+.mobile-nav { display: none !important; }
+.mobile-cta-sticky { display: none; }
+
+body { padding-bottom: 0; }
+
+/* --- HERO DESKTOP --- */
+.hero { min-height: 100vh; }
+
+.hero-content { padding: 0 60px; }
+
+.hero-badge {
+    font-size: 0.8rem;
+    padding: 10px 28px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+}
+
+.hero-stats { gap: 60px; margin-bottom: 45px; }
+.stat-number { font-size: 2.5rem; }
+.stat-label { font-size: 0.75rem; }
+
+.hero-cta {
+    flex-direction: row;
+    gap: 16px;
+}
+
+.hero-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.hero-scroll span {
+    font-family: var(--font-title);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--grey);
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--green), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 1; height: 40px; }
+    50% { opacity: 0.4; height: 25px; }
+}
+
+/* --- SERVICES DESKTOP --- */
+.services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card { padding: 36px 30px; }
+.service-icon { width: 56px; height: 56px; }
+
+/* --- ABOUT SECTION DESKTOP --- */
+.about-section { min-height: 600px; }
+
+.about-overlay {
+    background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.85) 45%, rgba(10,10,10,0.4) 100%);
+}
+
+.about-content { padding-top: 110px; padding-bottom: 110px; }
+.about-text { max-width: 580px; }
+
+/* --- GALLERY DESKTOP --- */
+.gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.gallery-full {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.gallery-item { aspect-ratio: 4/3; }
+
+.gallery-overlay {
+    padding: 20px;
+    background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.85) 100%);
+}
+
+.gallery-cat { font-size: 0.85rem; }
+
+/* --- REVIEWS DESKTOP --- */
+.reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.review-card { padding: 36px 30px; }
+
+/* --- ZONE DESKTOP --- */
+.zone-content {
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.zone-map { flex: 1.3; }
+.zone-map iframe { height: 450px; }
+.zone-cities { flex: 0.7; }
+.cities-list { grid-template-columns: 1fr; }
+
+/* --- CTA DESKTOP --- */
+.cta-section { padding: 120px 0; }
+
+.cta-bg { background-attachment: fixed; }
+
+.cta-buttons {
+    flex-direction: row;
+    gap: 16px;
+}
+
+/* --- CONTACT DESKTOP --- */
+.contact-grid {
+    flex-direction: row;
+    gap: 60px;
+}
+
+.contact-info { flex: 0.8; }
+.contact-form-wrap { flex: 1.2; }
+
+/* --- PAGE HERO DESKTOP --- */
+.page-hero { min-height: 55vh; }
+.page-hero-short { min-height: 45vh; }
+.page-hero-content { padding: 120px 60px 60px; }
+.page-hero-content h1 { margin-bottom: 16px; }
+.page-hero-content p { font-size: 1.1rem; }
+
+/* --- SERVICE DETAIL DESKTOP --- */
+.service-detail-grid {
+    gap: 80px;
+    align-items: center;
+}
+
+.service-detail-img { min-height: 400px; }
+
+.service-detail-img img {
+    transition: transform var(--transition-slow);
+}
+
+.service-detail-img:hover img { transform: scale(1.03); }
+
+/* --- ABOUT PAGE DESKTOP --- */
+.about-page-grid {
+    gap: 80px;
+    align-items: center;
+}
+
+.about-page-img { min-height: 450px; aspect-ratio: auto; }
+
+.about-exp-badge {
+    bottom: 24px;
+    right: 24px;
+    padding: 20px 28px;
+}
+
+.exp-number { font-size: 2.5rem; }
+
+/* --- VALUES DESKTOP --- */
+.values-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.value-card { padding: 36px 30px; }
+
+/* --- STATS DESKTOP --- */
+.stats-section { padding: 80px 0; }
+.stats-bg { background-attachment: fixed; }
+.stats-grid { grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.stat-big { font-size: 3.5rem; }
+.stat-suffix { font-size: 2rem; }
+
+/* --- ENGAGEMENTS DESKTOP --- */
+.engagements-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.engagement-item { padding: 36px 28px; }
+
+/* --- CONTACT PAGE DESKTOP --- */
+.contact-page-grid {
+    gap: 60px;
+}
+
+.contact-form-block { flex: 1.3; }
+.contact-info-block { flex: 0.7; }
+
+/* --- MAP DESKTOP --- */
+.map-header { padding: 50px 0 30px; }
+.map-header h2 { font-size: 1.5rem; }
+.map-full iframe { height: 500px; }
+
+/* --- FOOTER DESKTOP --- */
+.site-footer { padding: 70px 0 0; }
+
+.footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+/* --- GALLERY FILTERS DESKTOP --- */
+.gallery-filters {
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    font-size: 0.8rem;
+}
+
+/* --- HOVER EFFECTS DESKTOP --- */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.engagement-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* --- GLOW EFFECT ON CTA --- */
+.btn-primary {
+    position: relative;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(135deg, var(--green-light), var(--brown), var(--green));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition);
+    filter: blur(12px);
+}
+
+.btn-primary:hover::before { opacity: 0.5; }
+
+/* --- 1440px+ --- */
+@media (min-width: 1440px) {
+    .container { max-width: 1400px; padding: 0 80px; }
+    .header-inner { padding: 0 80px; }
+    .hero-content { max-width: 900px; }
+    .services-grid { gap: 28px; }
+    .reviews-grid { gap: 28px; }
+    .gallery-grid { gap: 14px; }
+    .gallery-full { gap: 14px; }
+}

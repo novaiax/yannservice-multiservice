@@ -465,8 +465,10 @@
             { src: 'demo/metz-motors/', title: 'Metz Motors', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/salamone-construction/', title: 'Giuseppe Salamone', sector: 'Maconnerie & construction', badge: 'Construction', filter: 'btp' },
             { src: 'demo/al-toiture/', title: 'AL Toiture 68', sector: 'Couvreur - Colmar', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/lourseyre-paysage/', title: 'Lourseyre Michel', sector: 'Espaces verts & paysagiste', badge: 'Paysagiste', filter: 'autre' },
             { src: 'demo/prestige-paysages/', title: 'Prestige Paysages', sector: 'Paysagiste & amenagement exterieur', badge: 'Paysagiste', filter: 'autre' },
             { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
+            { src: 'demo/salon-luxe/', title: 'Salon Luxe', sector: 'Salon de coiffure haut de gamme', badge: 'Beaute', filter: 'beaute' },
             { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
             { src: 'demo/artducarreau/', title: "L'Art Du Carreau", sector: 'Carreleur premium - Mulhouse', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/carreau-design-wittenheim/', title: 'Carreaux Design', sector: 'Carreleur premium - Wittenheim', badge: 'Carrelage', filter: 'btp' },
@@ -475,6 +477,7 @@
             { src: 'demo/garage-deux-freres/', title: 'Garage des Deux Freres', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' },
             { src: 'demo/lorraine-peinture/', title: 'Lorraine Peinture 57', sector: 'Peintre en batiment - Metz', badge: 'Peinture', filter: 'btp' },
+            { src: 'demo/salon-premium/', title: 'Salon Premium', sector: 'Institut de beaute premium', badge: 'Beaute', filter: 'beaute' },
             { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' },
             { src: 'demo/lion-color/', title: 'Lion Color', sector: 'Peintre professionnel - Strasbourg', badge: 'Peinture', filter: 'btp' },
             { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
@@ -526,9 +529,7 @@
 
         // Observe CARDS (not iframes) to detect visibility correctly
         // On mobile, iframe layout height is 900px but card is 220px — observing iframe gives wrong results
-        var MAX_LOADED = isMobile ? 5 : 50;
-        var loadedList = [];
-
+        // Mobile: load iframe when card enters viewport, unload when it leaves (prevents memory crash)
         window.cardObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 var card = entry.target;
@@ -537,15 +538,14 @@
                 if (entry.isIntersecting) {
                     if (!iframe.src && iframe.dataset.src) {
                         iframe.src = iframe.dataset.src;
-                        loadedList.push(iframe);
-                        while (loadedList.length > MAX_LOADED) {
-                            var old = loadedList.shift();
-                            if (old && old.src) { old.dataset.src = old.src; old.removeAttribute('src'); }
-                        }
                     }
+                } else if (isMobile && iframe.src) {
+                    // Mobile: unload iframe when card leaves viewport to save memory
+                    iframe.dataset.src = iframe.src;
+                    iframe.removeAttribute('src');
                 }
             });
-        }, { rootMargin: isMobile ? '100px' : '200px' });
+        }, { rootMargin: isMobile ? '200px' : '200px' });
         document.querySelectorAll('.demo-card').forEach(function(card) {
             window.cardObserver.observe(card);
         });

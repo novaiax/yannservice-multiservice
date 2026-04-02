@@ -1,11 +1,11 @@
 /* =====================================================
-   PAGE PREMIUM — CONVERSION + LUXE
+   PAGE PREMIUM - CONVERSION + LUXE
    Sans arrondis enfantins • Perception haut de gamme
    ===================================================== */
 
 /* ==================== VARIABLES ==================== */
 :root {
-  /* Colors — Palette sophistiquée */
+  /* Colors - Palette sophistiquée */
   --bg-primary: #ffffff;
   --bg-secondary: #fafafa;
   --bg-dark: #0f0f0f;
@@ -23,7 +23,7 @@
   --border-medium: #d4d4d4;
   --border-dark: #0f0f0f;
 
-  /* Spacing — Échelle harmonieuse */
+  /* Spacing - Échelle harmonieuse */
   --s1: 4px;
   --s2: 8px;
   --s3: 12px;
@@ -35,12 +35,12 @@
   --s9: 80px;
   --s10: 120px;
 
-  /* Border Radius — Minimal, jamais enfantin */
+  /* Border Radius - Minimal, jamais enfantin */
   --r-none: 0;
   --r-sm: 2px;
   --r-md: 4px;
 
-  /* Shadows — Subtiles et élégantes */
+  /* Shadows - Subtiles et élégantes */
   --sh-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --sh-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --sh-lg: 0 8px 24px rgba(0, 0, 0, 0.12);

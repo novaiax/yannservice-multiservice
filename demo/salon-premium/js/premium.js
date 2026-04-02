@@ -1,5 +1,5 @@
 /* =====================================================
-   PAGE PREMIUM — INTERACTIONS & SLIDER
+   PAGE PREMIUM - INTERACTIONS & SLIDER
    ===================================================== */
 
 // ==================== SMOOTH SCROLL ====================
@@ -104,40 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
   sliders.forEach(slider => new BeforeAfterSlider(slider));
 });
 
-// ==================== STICKY BAR VISIBILITY ====================
-const stickyBar = document.getElementById('stickyBar');
-let lastScrollTop = 0;
-const scrollThreshold = 300;
-
-function handleStickyBar() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  // Show sticky bar after scrolling down past threshold
-  if (scrollTop > scrollThreshold) {
-    stickyBar.style.transform = 'translateY(0)';
-  } else {
-    stickyBar.style.transform = 'translateY(100%)';
-  }
-
-  lastScrollTop = scrollTop;
-}
-
-// Throttle scroll event for performance
-let ticking = false;
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      handleStickyBar();
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
-
-// Initialize sticky bar position
-stickyBar.style.transform = 'translateY(100%)';
-stickyBar.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-
 // ==================== INTERSECTION OBSERVER (FADE IN) ====================
 const observerOptions = {
   threshold: 0.1,
@@ -222,5 +188,5 @@ prefetchLinks.forEach(url => {
 });
 
 // ==================== CONSOLE MESSAGE ====================
-console.log('%c✂️ Salon Éclat — Premium Page', 'font-size: 16px; font-weight: bold; color: #0f0f0f;');
+console.log('%c✂️ Salon Éclat - Premium Page', 'font-size: 16px; font-weight: bold; color: #0f0f0f;');
 console.log('%cPage optimisée pour la conversion', 'font-size: 12px; color: #757575;');
