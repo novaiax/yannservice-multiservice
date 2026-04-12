@@ -1,0 +1,20 @@
+# YannService.com
+
+> Services numériques multi-prestations pour professionnels et entreprises en France. Création de sites web, refonte, maintenance, SEO et solutions digitales sur mesure. Expertise technique complète pour la transformation numérique des PME et artisans.
+
+## Pages principales
+
+- [Accueil](https://yannservice.com/): Présentation des services numériques
+- [Sites web](https://yannservice.com/site.html): Création et refonte de sites web professionnels
+- [Tarifs](https://yannservice.com/tarifs.html): Grille tarifaire des prestations
+- [Contact](https://yannservice.com/contact.html): Formulaire de contact et devis
+- [À propos](https://yannservice.com/propos.html): Présentation de l'équipe et de l'expertise
+- [Urgence](https://yannservice.com/urgence.html): Interventions urgentes sur sites web
+
+## Informations clés
+
+- Service basé à Strasbourg, Alsace, France
+- Fondé par Yann Wirtz
+- Multi-services numériques : création web, SEO, maintenance, refonte
+- Solutions pour artisans, commerçants, PME et professions libérales
+- Contact : yannwzservice@gmail.com
