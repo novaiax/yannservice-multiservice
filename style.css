@@ -1202,7 +1202,84 @@ ul { list-style: none; }
     gap: 1.5rem;
 }
 
+.testimonials-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.testimonials-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 3rem) / 3);
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0.25rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.testimonials-track::-webkit-scrollbar { display: none; }
+
+.testimonials-track > .testimonial-card {
+    scroll-snap-align: start;
+}
+
+.testimonials-nav {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.testimonials-nav:hover {
+    border-color: var(--gray-400);
+    color: var(--black);
+    background: var(--gray-50);
+}
+
+.testimonials-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.testimonial-link-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--gray-400);
+    opacity: 0.6;
+    transition: all var(--transition);
+}
+
+a.testimonial-card:hover .testimonial-link-icon {
+    color: var(--brand-blue);
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+a.testimonial-card:hover {
+    border-color: var(--gray-400);
+}
+
 .testimonial-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-md);
@@ -1261,6 +1338,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
     .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-track { grid-auto-columns: 85%; }
 }
 
 /* ===================================

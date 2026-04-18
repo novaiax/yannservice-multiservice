@@ -81,6 +81,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(el => counterObserver.observe(el));
 
+    // Testimonials carousel
+    const carousel = document.querySelector('.testimonials-carousel');
+    if (carousel) {
+        const track = carousel.querySelector('.testimonials-track');
+        const prevBtn = carousel.querySelector('.testimonials-prev');
+        const nextBtn = carousel.querySelector('.testimonials-next');
+
+        const getStep = () => {
+            const card = track.querySelector('.testimonial-card');
+            if (!card) return track.clientWidth;
+            const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+            return card.getBoundingClientRect().width + gap;
+        };
+
+        const updateButtons = () => {
+            prevBtn.disabled = track.scrollLeft <= 1;
+            nextBtn.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+        };
+
+        prevBtn.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
+        nextBtn.addEventListener('click', () => track.scrollBy({ left: getStep(), behavior: 'smooth' }));
+        track.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+    }
+
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
