@@ -531,8 +531,9 @@ ul { list-style: none; }
 }
 
 .hero-micro-proof {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     font-size: 0.875rem;
     color: var(--gray-500);
@@ -3938,6 +3939,7 @@ button {
 .hero-micro-proof {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     font-size: 0.875rem;
     color: var(--gray-400);
