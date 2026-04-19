@@ -1,5 +1,8 @@
 name = "yannservice-multiservice"
 compatibility_date = "2025-09-27"
 
+[build]
+command = "bash build.sh"
+
 [assets]
-directory = "./"
+directory = "./dist"
