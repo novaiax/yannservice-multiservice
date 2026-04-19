@@ -14006,10 +14006,23 @@ button {
     padding-top: 1rem;
 }
 
-/* Baseline des choice-cards : rester sur 1 ligne */
+/* Baseline des choice-cards : rester sur 1 ligne en desktop, wrap en mobile */
 .choice-card .choice-baseline {
     font-size: 0.8125rem;
-    white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+    .choice-card .choice-baseline {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .choice-card .choice-baseline {
+        font-size: 0.9375rem;
+        white-space: normal;
+        line-height: 1.5;
+    }
 }
 
 .hero-micro-proofs {
