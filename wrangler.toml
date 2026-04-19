@@ -1,4 +1,4 @@
-name = "yannservice-multiservice"
+name = "site-yannservice-multiservice"
 compatibility_date = "2025-09-27"
 
 [build]
