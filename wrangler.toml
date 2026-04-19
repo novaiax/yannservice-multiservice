@@ -8,3 +8,4 @@ command = "bash build.sh"
 [assets]
 directory = "./dist"
 binding = "ASSETS"
+run_worker_first = true
