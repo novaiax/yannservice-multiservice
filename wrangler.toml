@@ -1,8 +1,10 @@
 name = "site-yannservice-multiservice"
 compatibility_date = "2025-09-27"
+main = "_worker.js"
 
 [build]
 command = "bash build.sh"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"

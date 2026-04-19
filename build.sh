@@ -17,6 +17,8 @@ find . -mindepth 1 -maxdepth 1 \
   ! -name 'package-lock.json' \
   ! -name '*.bak' \
   ! -name '*.log' \
+  ! -name '_worker.js' \
+  ! -name '.gitattributes' \
   -exec cp -r {} dist/ \;
 
 echo "Build OK. Contents of dist:"
