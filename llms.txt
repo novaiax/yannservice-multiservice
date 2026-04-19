@@ -1,14 +1,14 @@
-# YannService.fr
+# YannService.com
 
 > Création de sites web professionnels en abonnement mensuel pour artisans et PME en France. Sites vitrines clé en main à 29,99€/mois tout compris : design sur mesure, SEO, hébergement, maintenance et refonte annuelle. Livraison en 7 jours, sans engagement.
 
 ## Pages principales
 
-- [Accueil](https://yannservice.fr/): Présentation du service de création de sites web en abonnement
-- [Tarifs](https://yannservice.fr/tarifs.html): Grille tarifaire détaillée des formules d'abonnement
-- [Souscrire](https://yannservice.fr/souscrire.html): Formulaire de souscription en ligne
-- [CGV](https://yannservice.fr/cgv.html): Conditions générales de vente
-- [Mentions légales](https://yannservice.fr/mentions-legales.html): Mentions légales obligatoires
+- [Accueil](https://yannservice.com/): Présentation du service de création de sites web en abonnement
+- [Tarifs](https://yannservice.com/tarifs.html): Grille tarifaire détaillée des formules d'abonnement
+- [Souscrire](https://yannservice.com/souscrire.html): Formulaire de souscription en ligne
+- [CGV](https://yannservice.com/cgv.html): Conditions générales de vente
+- [Mentions légales](https://yannservice.com/mentions-legales.html): Mentions légales obligatoires
 
 ## Informations clés
 
@@ -18,4 +18,4 @@
 - Prix : à partir de 29,99€/mois tout compris
 - Délai de livraison : 7 jours
 - Sans engagement
-- Contact : yannwzservice@gmail.com
+- Contact : contact@yannservice.fr
