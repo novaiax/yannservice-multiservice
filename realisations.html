@@ -160,6 +160,38 @@
             white-space: nowrap;
         }
 
+        /* Client cards - mise en avant */
+        .demo-card.is-client {
+            border-color: #10b981;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.12);
+            position: relative;
+        }
+        .demo-card.is-client:hover {
+            box-shadow: 0 16px 48px rgba(16, 185, 129, 0.22);
+            border-color: #059669;
+        }
+        .demo-card.is-client::before {
+            content: 'CLIENT REEL';
+            position: absolute;
+            top: 0.625rem;
+            left: 0.625rem;
+            z-index: 3;
+            padding: 0.3125rem 0.6875rem;
+            background: #10b981;
+            color: #fff;
+            font-size: 0.625rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+            text-transform: uppercase;
+        }
+        .demo-card.is-client .demo-card-badge {
+            background: #10b981;
+            color: #fff;
+            border-color: #10b981;
+        }
+
         /* Fullscreen overlay */
         .fullscreen-overlay {
             display: none;
@@ -337,7 +369,7 @@
                 <span class="section-label">Portfolio</span>
                 <h1 class="section-heading">Nos exemples de sites web</h1>
                 <p class="demos-hero-subtitle">
-                    Chaque design est adaptable à votre activité. Choisissez un modèle existant ou optez pour un design entièrement sur mesure.
+                    Les 4 premiers sont nos <strong>clients réels</strong> en ligne. Les autres sont des modèles adaptables à votre activité, ou base pour un design entièrement sur mesure.
                 </p>
                 <div class="demos-hero-note demos-hero-note-desktop">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -457,12 +489,14 @@
     <script>
     (function() {
         var demos = [
+            { src: 'https://infini-paysage.com/', title: 'Infini Paysage', sector: 'Paysagiste - Kingersheim (Haut-Rhin)', badge: 'Client', filter: 'autre', client: true },
+            { src: 'https://rscp-renovation.fr/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Client', filter: 'btp', client: true },
+            { src: 'https://maestrobuilding.com/', title: 'Maestro Building', sector: 'Construction & renovation - Freyming-Merlebach', badge: 'Client', filter: 'btp', client: true },
+            { src: 'https://lpbeautynails.com/', title: 'LP Beauty Nails', sector: 'Prothesiste ongulaire - Strasbourg', badge: 'Client', filter: 'beaute', client: true },
             { src: 'demo/saez-etancheite/', title: 'SAEZ Etancheite', sector: 'Etancheite & isolation - Selestat', badge: 'Etancheite', filter: 'btp' },
             { src: 'demo/karuco-co/', title: 'Karakus & Co', sector: 'Carreleur artisan - Habsheim', badge: 'Carrelage', filter: 'btp' },
-            { src: 'demo/ape-plomberie/', title: 'APE Plomberie', sector: 'Plomberie & renovation - Ostwald', badge: 'Plomberie', filter: 'btp' },
             { src: 'demo/strasbourg-carrelage/', title: 'Strasbourg Carrelage', sector: 'Carrelage & revetement - Strasbourg', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/vk-construction/', title: 'WK Constructions', sector: 'Construction & maconnerie - Haguenau', badge: 'Construction', filter: 'btp' },
-            { src: 'demo/basicdept/', title: 'BASIC/DEPT', sector: 'Agence digitale & branding', badge: 'Agence', filter: 'autre' },
             { src: 'demo/metz-motors/', title: 'Metz Motors', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
             { src: 'demo/salamone-construction/', title: 'Giuseppe Salamone', sector: 'Maconnerie & construction', badge: 'Construction', filter: 'btp' },
             { src: 'demo/al-toiture/', title: 'AL Toiture 68', sector: 'Couvreur - Colmar', badge: 'Toiture', filter: 'btp' },
@@ -470,19 +504,11 @@
             { src: 'demo/prestige-paysages/', title: 'Prestige Paysages', sector: 'Paysagiste & amenagement exterieur', badge: 'Paysagiste', filter: 'autre' },
             { src: 'demo/viss-couverture/', title: 'Viss Couverture', sector: 'Couvreur expert - Nancy', badge: 'Toiture', filter: 'btp' },
             { src: 'demo/salon-luxe/', title: 'Salon Luxe', sector: 'Salon de coiffure haut de gamme', badge: 'Beaute', filter: 'beaute' },
-            { src: 'demo/rscp-renovation/', title: 'RSCP Renovation', sector: 'Salle de bain & peinture - Ergersheim', badge: 'Renovation', filter: 'btp' },
-            { src: 'demo/artducarreau/', title: "L'Art Du Carreau", sector: 'Carreleur premium - Mulhouse', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/carreau-design-wittenheim/', title: 'Carreaux Design', sector: 'Carreleur premium - Wittenheim', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/laurent-toiture/', title: 'Laurent Toiture', sector: 'Couvreur-zingueur - Strasbourg', badge: 'Toiture', filter: 'btp' },
             { src: 'demo/carreaux-design-ploufragan/', title: 'Carreaux&Design', sector: 'Carreleur - Ploufragan', badge: 'Carrelage', filter: 'btp' },
             { src: 'demo/garage-deux-freres/', title: 'Garage des Deux Freres', sector: 'Garage automobile - Metz', badge: 'Automobile', filter: 'auto' },
-            { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' },
-            { src: 'demo/lorraine-peinture/', title: 'Lorraine Peinture 57', sector: 'Peintre en batiment - Metz', badge: 'Peinture', filter: 'btp' },
-            { src: 'demo/salon-premium/', title: 'Salon Premium', sector: 'Institut de beaute premium', badge: 'Beaute', filter: 'beaute' },
-            { src: 'demo/al-chauffage/', title: 'AL Chauffage 68', sector: 'Chauffagiste & plombier - Colmar', badge: 'Chauffage', filter: 'btp' },
-            { src: 'demo/lion-color/', title: 'Lion Color', sector: 'Peintre professionnel - Strasbourg', badge: 'Peinture', filter: 'btp' },
-            { src: 'demo/ms-carrelage/', title: 'MS Carrelage 13', sector: 'Carreleur premium - Marseille', badge: 'Carrelage', filter: 'btp' },
-            { src: 'demo/novalyse/', title: 'Novalyse', sector: 'Toiture, isolation & energie - Lyon', badge: 'Energie', filter: 'energie' }
+            { src: 'demo/ks-bat/', title: 'KS Bat Renovation', sector: 'Plaquiste & renovation - Montigny-les-Metz', badge: 'Renovation', filter: 'btp' }
         ];
 
         var grid = document.getElementById('demosGrid');
@@ -497,7 +523,7 @@
 
         demos.forEach(function(d) {
             var card = document.createElement('div');
-            card.className = 'demo-card';
+            card.className = 'demo-card' + (d.client ? ' is-client' : '');
             card.dataset.sector = d.filter;
             card.onclick = function() { openFs(d.src, d.title); };
 
