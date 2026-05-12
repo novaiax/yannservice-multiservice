@@ -1,0 +1,263 @@
+/* ============================================================
+   LP BEAUTY NAILS - Desktop overrides (≥ 1024px)
+   ============================================================ */
+
+.container{ padding: 0 40px; }
+.section{ padding: 130px 0; }
+
+/* ── Top bar ── */
+.topbar-inner{ justify-content: space-between; padding: 11px 40px; }
+.topbar-hide{ display: inline-flex; }
+
+/* ── Navigation ── */
+.nav-inner{ padding: 18px 40px; }
+.nav-logo img{ height: 64px; }
+.footer-brand .nav-logo img{ height: 110px; }
+
+.nav-toggle{ display: none; }
+.nav-links{
+  position: static;
+  background: transparent;
+  flex-direction: row; padding: 0;
+  transform: none !important;
+  gap: 38px;
+  width: auto; height: auto;
+  align-items: center;
+}
+.nav-link{
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--ink);
+  position: relative;
+  padding: 6px 0;
+}
+.nav-link::after{
+  content: ""; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width var(--t);
+}
+.nav-link:hover::after,
+.nav-link.active::after{ width: 100%; }
+.nav-link:hover, .nav-link.active{
+  color: var(--gold-deep);
+  font-style: normal;
+}
+.nav-cta{
+  margin-top: 0;
+  padding: 13px 28px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.nav-cta::after{ display: none; }
+
+/* ── Hero ── */
+.hero{ padding: 160px 40px 120px; min-height: 100vh; }
+.hero-content{ max-width: 1000px; }
+.hero-title{
+  font-size: clamp(70px, 8vw, 120px);
+  letter-spacing: -3px;
+  margin-bottom: 32px;
+}
+.hero-sub{
+  font-size: 18px;
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+.hero-actions{
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.hero-actions .btn{ min-width: 220px; }
+.hero-stats{
+  max-width: 720px; margin: 0 auto;
+  padding: 32px 0;
+}
+.hero-stats strong{ font-size: 32px; }
+.hero-stats span{ font-size: 11px; letter-spacing: 2px; }
+
+.hero-scroll{
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  z-index: 3;
+}
+.hero-scroll span{
+  width: 1px; height: 50px;
+  background: linear-gradient(180deg, transparent, var(--gold-light));
+  display: block;
+  animation: scrollLine 2.4s ease-in-out infinite;
+}
+@keyframes scrollLine{
+  0%, 100%{ transform: scaleY(1); transform-origin: top; }
+  50%{ transform: scaleY(0.4); transform-origin: top; }
+}
+
+/* ── Marquee ── */
+.marquee{ padding: 28px 0; }
+.marquee-track{ font-size: 32px; gap: 44px; }
+
+/* ── Offer ── */
+.offer-grid{
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+.offer-list strong{ font-size: 36px; }
+.offer-list li{ padding: 20px 0; }
+
+/* ── About ── */
+.about-grid{
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-media{ height: 620px; }
+.about-badge{
+  bottom: -32px; right: -32px;
+  padding: 28px 32px;
+}
+.badge-num{ font-size: 40px; }
+
+/* ── Services grid (home cards) ── */
+.services-grid{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.service-card{ padding: 40px 32px; }
+.service-card h3{ font-size: 28px; }
+
+/* Pricing two columns large */
+.pricing-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.pricing-block{ padding: 48px 40px; }
+
+/* Service detail rows */
+.service-row{
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+}
+.service-media img{ height: 560px; }
+
+/* Offer banner */
+.offer-banner-card{ grid-template-columns: 1fr 1.2fr; }
+.offer-banner-img{ padding: 56px; }
+.offer-banner-text{ padding: 72px 64px; }
+
+/* Loyalty */
+.loyalty-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.loyalty-media{ padding: 40px; }
+
+/* Gallery */
+.gallery-grid{
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.gallery-grid-page{
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery-item-tall{ grid-row: span 2; }
+.gallery-item-wide{ grid-column: span 2; }
+
+/* Location */
+.location-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+}
+.location-map{ height: 580px; }
+.info-box{ padding: 32px; }
+
+/* Contact CTA */
+.contact-cta{ padding: 120px 0; }
+.cta-card p{ font-size: 17px; }
+.cta-actions{ flex-direction: row; justify-content: center; gap: 18px; }
+
+/* Page hero */
+.page-hero{ padding: 180px 40px 120px; min-height: 64vh; }
+.page-hero-short{ min-height: 48vh; padding: 140px 40px 90px; }
+.page-title{
+  font-size: clamp(56px, 6vw, 88px);
+  letter-spacing: -2px;
+}
+.page-sub{ font-size: 17px; }
+
+/* Filters */
+.filters{ gap: 12px; }
+.filter-btn{ padding: 11px 22px; font-size: 11px; }
+
+/* Values */
+.values-grid{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.value-card{ padding: 40px 32px; }
+
+/* Book grid */
+.book-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.book-card{ padding: 48px 40px; }
+.book-card h2{ font-size: 36px; }
+
+/* Contact grid */
+.contact-grid{
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.contact-form-wrap{ padding-right: 0; }
+.contact-info{ padding: 36px 32px; position: sticky; top: 110px; }
+.form-row-2{ flex-direction: row; gap: 20px; }
+.form-row-2 label{ flex: 1; }
+.contact-form{ gap: 20px; }
+
+/* Map section */
+.map-section iframe{ height: 540px; }
+
+/* Legal */
+.legal-content{ padding: 0 20px; }
+.legal-content h2{ font-size: 28px; margin: 40px 0 16px; }
+.legal-content p, .legal-list li{ font-size: 15.5px; }
+
+/* Footer */
+.footer{ padding-top: 96px; }
+.footer-grid{
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.1fr;
+  gap: 56px;
+  padding-bottom: 64px;
+}
+.footer-bottom-inner{
+  flex-direction: row; justify-content: space-between;
+  text-align: left;
+}
+
+/* Sticky call hidden on desktop */
+.sticky-call{ display: none; }
+
+/* Hover effects on desktop only */
+.gallery-item:hover .gallery-tag{
+  background: var(--gold-deep);
+  color: #fff;
+}
+
+/* ── Wide desktop (≥ 1440px) ── */
+@media (min-width: 1440px){
+  .container{ padding: 0 60px; }
+  .section{ padding: 150px 0; }
+  .hero{ min-height: 100vh; padding: 180px 60px 140px; }
+  .hero-title{ font-size: 130px; }
+  .nav-inner{ padding: 22px 60px; }
+  .topbar-inner{ padding: 12px 60px; }
+}
